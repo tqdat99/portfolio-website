@@ -1,0 +1,258 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.my-logo {
+    max-width: 64px;
+    height: auto;
+    width: auto;
+}
+
+.navbar-p {
+    font: 16px "Montserrat";
+    margin-right: 64px;
+}
+
+.navbar-active {
+    font-weight: 500;
+    color: #4B4D4B;
+}
+
+.navbar-inactive {
+    font-weight: normal;
+    color: rgb(184, 181, 181);
+}
+
+.last-name {
+    font: 72px "Montserrat";
+    font-weight: 400;
+    color: #2C2828;
+}
+
+.first-name {
+    font: 96px "Montserrat";
+    font-weight: 700;
+    color: #2C2828;
+}
+
+.my-hero {
+    max-width: 400px;
+    height: auto;
+    width: auto;
+}
+
+a {
+    margin-top: 40px;
+    color: #2C2828;
+}
+
+.my-link {
+    font: 16px "Montserrat";
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.16rem;
+    padding: 8px 8px 8px 0px;
+    margin-top: 32px;
+    -webkit-transition: letter-spacing 0.3s;
+    transition: letter-spacing 0.3s;
+}
+
+.my-link:hover {
+    letter-spacing: 0.32rem;
+}
+
+.project-thumbnail {
+    position: relative;
+    width: 50%;
+    transition: transform .5s, filter 1.5s ease-in-out;
+    filter: grayscale(100%);
+}
+
+.project-thumbnail:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.project-thumbnail:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.project-session {
+    padding: 16px;
+}
+
+.square {
+    float: left;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    margin: 1.66%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: background-size 0.3s ease-out;
+    -moz-transition: background-size 0.3s ease-out, -webkit-box-shadow 0.3s ease-out, -moz-box-shadow 0.3s ease-out, box-shadow 0.3s ease-out;
+    -ms-transition: background-size 0.3s ease-out, -webkit-box-shadow 0.3s ease-out, -moz-box-shadow 0.3s ease-out, box-shadow 0.3s ease-out;
+    -o-transition: background-size 0.3s ease-out, -webkit-box-shadow 0.3s ease-out, -moz-box-shadow 0.3s ease-out, box-shadow 0.3s ease-out;
+    -webkit-transition: background-size 0.3s ease-out, -webkit-box-shadow 0.3s ease-out, -moz-box-shadow 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.square:hover {
+    background-size: auto 116%;
+    -webkit-box-shadow: 0px 16px 40px 0px rgba(42, 46, 42, 0.16);
+    -moz-box-shadow: 0px 16px 40px 0px rgba(42, 46, 42, 0.16);
+    box-shadow: 0px 16px 40px 0px rgba(42, 46, 42, 0.16);
+}
+
+.col-title {
+    padding-left: 56px;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.project-1 {
+    background-image: url('/images/project-1.jpg');
+}
+
+.project-2 {
+    background-image: url('/images/project-2.jpg');
+}
+
+h2 {
+    font: 48px "Montserrat";
+    font-weight: 700;
+    color: #2C2828;
+    margin-top: 64px;
+    margin-bottom: 72px;
+    padding-bottom: 24px;
+    display: inline-block;
+    font-size: 40;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #27A08D, #27A08D);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 50% 8px;
+}
+
+.project-session .project-title {
+    font: 40px "Montserrat";
+    font-weight: 600;
+    color: #2C2828;
+    letter-spacing: 0.08rem;
+    float: right;
+}
+
+.greeting {
+    font: 72px "Montserrat";
+    font-weight: 600;
+    color: #2C2828;
+    letter-spacing: 0.08rem;
+    float: right;
+}
+
+.contact {
+    font: 40px "Montserrat";
+    font-weight: 600;
+    color: #2C2828;
+    letter-spacing: 0.08rem;
+    float: right;
+    line-height: 80px;
+}
+
+p {
+    font: 18px "Montserrat";
+    font-weight: 400;
+    color: #2C2828;
+    line-height: 32px;
+    display: inline;
+}
+
+span.green {
+    color: #27A08D;
+    font-weight: 600;
+}
+
+.green-link {
+    color: #27A08D;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.arrow {
+    color: #0c5449;
+}
+
+.arrow::after {
+    display: inline-block;
+    padding-left: 16px;
+    content: url("/images/link-arrow.svg");
+    /* content: "\0279E"; */
+    -webkit-transition: transform 0.3s ease-out;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.arrow:hover {
+    color: #0c5449;
+}
+
+.arrow:hover::after {
+    -webkit-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.footer-text {
+    font: 12px "Montserrat";
+    font-weight: 400;
+    letter-spacing: 0.24rem;
+    display: block;
+}
+
+.footer {
+    /* height: 18%; */
+    padding-top: 40px;
+    padding-bottom: 32px;
+    margin-top: 48px;
+}
+
+.header {
+    /* height: 10%; */
+}
+
+.contact-session {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-right: 24%;
+    padding-left: 24%;
+    text-align: center;
+}
+
+.home-session {
+    height: 100%;
+}
