@@ -1,4 +1,6 @@
-@ body {
+body {
+    padding-left: 8%;
+    padding-right: 8%;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -10,33 +12,39 @@
 
 .navbar-p {
     font: 16px "Montserrat";
-    margin-right: 64px;
+    margin-right: 32px;
+    padding: 24px;
 }
 
 .navbar-active {
-    font-weight: 500;
+    font-weight: 600;
     color: #4B4D4B;
+    text-align: center;
 }
 
 .navbar-inactive {
-    font-weight: normal;
-    color: rgb(184, 181, 181);
+    font-weight: 600;
+    color: rgb(212, 205, 205);
+    text-align: center;
 }
 
 .last-name {
     font: 72px "Montserrat";
     font-weight: 400;
     color: #2C2828;
+    width: 100%;
 }
 
 .first-name {
     font: 96px "Montserrat";
     font-weight: 700;
     color: #2C2828;
+    width: 100%;
 }
 
 .my-hero {
-    max-width: 400px;
+    max-width: 100%;
+    max-height: 100%;
     height: auto;
     width: auto;
 }
@@ -47,6 +55,7 @@ a {
 }
 
 .my-link {
+    width: 100%;
     font: 16px "Montserrat";
     font-weight: 400;
     text-transform: uppercase;
@@ -253,6 +262,32 @@ a:hover {
     text-align: center;
 }
 
-.home-session {
-    height: 100%;
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.nav-d-flex {
+    display: -ms-flexbox!important;
+    /* display: flex!important; */
+}
+
+
+/* @media (min-width: 770px) {
+    .navbar-expand-lg .navbar-toggler {
+        display: none;
+    }
+} */
+
+@media (min-width: 770px) {
+    .home-session {
+        padding-left: 8%;
+        padding-right: 8%;
+        height: 70%;
+    }
+}
+
+@media (min-width: 770px) {
+    .name-session {
+        padding-left: 64px;
+    }
 }

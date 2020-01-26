@@ -20,39 +20,50 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow header">
-        <a href="#" class="/-brand d-flex align-items-center my-0 mr-md-auto font-weight-normal">
-            <img src="/images/logo.png" class="my-logo">
-        </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <nav class="collapse navbar-collapse my-2 my-md-0 mr-md-3" id="navbarNav" style="width: fit-content;">
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <p class="navbar-p navbar-active">Home</p>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="navbar-p navbar-inactive" href="/projects">Projects</a>
+                    <a class="nav-link" href="#">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="p-2 navbar-p navbar-inactive" href="/about">About</a>
+                    <a class="nav-link" href="#">Pricing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="p-2 navbar-p navbar-inactive" href="/contact">Contact</a>
+                    <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
             </ul>
-        </nav>
+        </div>
     </nav>
 
-    <div class="row d-flex align-content-center flex-wrap home-session">
-        <div class="col-md-5 d-flex align-items-end flex-column">
-            <img src="images/hero.png" class="my-hero animated fadeIn">
-        </div>
-        <div class="col-md-7 d-flex align-content-center flex-wrap name-session">
-            <h1 class="last-name animated fadeInUp d-flex">TRUONG</h1>
-            <h1 class="first-name last-name animated fadeInUp delay-025s">QUOC DAT</h1>
-            <a href="/projects" class="my-link arrow animated fadeInUp delay-05s">my projects</a>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow header">
+        <a href="#" class="/-brand d-flex align-items-center my-0 mr-md-auto font-weight-normal">
+            <img src="/images/logo.png" class="my-logo">
+        </a>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 navbar-p navbar-active" href="/">Home</a>
+            <a class="p-2 navbar-p navbar-inactive" href="/projects">Projects</a>
+            <a class="p-2 navbar-p navbar-inactive" href="/about">About</a>
+            <a class="p-2 navbar-p navbar-inactive" href="/contact">Contact</a>
+        </nav>
+    </div>
+    <div class="container d-flex align-content-center flex-wrap" style="height: 80%;">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="images/hero.png" class="my-hero animated fadeIn">
+            </div>
+            <div class="col-md-7 d-flex align-content-center flex-wrap">
+                <h1 class="last-name animated fadeInUp ">TRUONG</h1>
+                <h1 class="first-name last-name animated fadeInUp delay-025s">QUOC DAT</h1>
+                <a href="/projects" class="my-link arrow animated fadeInUp delay-05s">my projects</a>
+            </div>
         </div>
     </div>
 
