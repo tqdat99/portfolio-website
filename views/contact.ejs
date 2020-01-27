@@ -21,52 +21,42 @@
 </head>
 
 <body>
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-        <a href="#" class="navbar-brand d-flex align-items-center my-0 mr-md-auto font-weight-normal">
-            <img src="/images/logo.png" class="my-logo">
-        </a>
-        <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 navbar-p navbar-inactive" href="/">Home</a>
-            <a class="p-2 navbar-p navbar-inactive" href="/projects">Projects</a>
-            <a class="p-2 navbar-p navbar-inactive" href="/about">About</a>
-            <a class="p-2 navbar-p navbar-active" href="/contact">Contact</a>
-        </nav>
-    </div>
 
-    <div class="my-section">
-        <div class="container text-center">
-            <h2 class="animated animated fadeIn title">Contact</h2>
+    <%include nav.ejs%>
+
+
+        <div class="my-section">
+            <div class="container text-center">
+                <h2 class="animated animated fadeIn title">Contact</h2>
+            </div>
+            <div class="contact-section animated fadeIn delay-025s">
+                <p class="contact">You can say hi to me through <a href="mailto:tqdat99@gmail.com?Subject=Hi" target="_top" class="green-link">tqdat99@gmail.com</a> or <a href="https://www.facebook.com/tqdat99" class="green-link" target="_blank">Facebook</a>. </br>Otherwise,
+                    check my <a href="https://www.linkedin.com/in/tqdat99/" class="green-link" target="_blank">Linkedin</a>,
+                    <a href="https://dribbble.com/tqdat99" class="green-link" target="_blank">Dribbble</a>, <a href="https://vimeo.com/tqdat99" class="green-link" target="_blank">Vimeo</a>.
+                </p>
+            </div>
         </div>
+        <%include footer.ejs%>
 
-        <div class="contact-session animated fadeIn delay-025s">
-            <p class="contact">You can say hi to me through <a href="mailto:tqdat99@gmail.com?Subject=Hi" target="_top" class="green-link">tqdat99@gmail.com</a> or <a href="https://www.facebook.com/tqdat99" class="green-link" target="_blank">Facebook</a>. </br>Otherwise,
-                check my <a href="https://www.linkedin.com/in/tqdat99/" class="green-link" target="_blank">Linkedin</a>,
-                <a href="https://dribbble.com/tqdat99" class="green-link" target="_blank">Dribbble</a>, <a href="https://vimeo.com/tqdat99" class="green-link" target="_blank">Vimeo</a>.
-            </p>
-        </div>
-    </div>
-
-    <%include footer.ejs%>
-
-        <!-- Bootstrap core JavaScript
+            <!-- Bootstrap core JavaScript
     ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script>
-            window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
-        </script>
-        <script src="../../assets/js/vendor/popper.min.js"></script>
-        <script src="../../dist/js/bootstrap.min.js"></script>
-        <script src="../../assets/js/vendor/holder.min.js"></script>
-        <script>
-            Holder.addTheme('thumb', {
-                bg: '#55595c',
-                fg: '#eceeef',
-                text: 'Thumbnail'
-            });
-        </script>
+            <!-- Placed at the end of the document so the pages load faster -->
+            <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <script>
+                window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+            </script>
+            <script src="../../assets/js/vendor/popper.min.js"></script>
+            <script src="../../dist/js/bootstrap.min.js"></script>
+            <script src="../../assets/js/vendor/holder.min.js"></script>
+            <script>
+                Holder.addTheme('thumb', {
+                    bg: '#55595c',
+                    fg: '#eceeef',
+                    text: 'Thumbnail'
+                });
+            </script>
 
 
 </body>

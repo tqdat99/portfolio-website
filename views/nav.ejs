@@ -1,0 +1,49 @@
+<div class="my-nav d-flex flex-md-row align-items-center bg-white border-bottom box-shadow justify-content-between">
+    <a href="#" class="/-brand d-flex align-items-center my-0 mr-md-auto font-weight-normal">
+        <img src="/images/logo.png" class="my-logo">
+    </a>
+    <img src="/images/menu.svg" class="hamburger" onclick="openNav()">
+    <nav class="my-2 my-md-0 mr-md-3 navbar-options">
+        <a id="home" class="p-2 navbar-p navbar-option" href="/">Home</p>
+        <a id="projects" class="p-2 navbar-p navbar-option" href="/projects">Projects</a>
+        <a id="about" class="p-2 navbar-p navbar-option" href="/about">About</a>
+        <a id="contact" class="p-2 navbar-p navbar-option" href="/contact">Contact</a>
+    </nav>
+</div>
+<div id="mySidebar" class="sidebar hamburger">
+    <p id="sidenav-home" class="sidebar-option">Home</p>
+    <a id="sidenav-projects" class="sidebar-option" href="/projects">Projects</a>
+    <a id="sidenav-about" class="sidebar-option" href="/about">About</a>
+    <a id="sidenav-contact" class="sidebar-option" href="/contact">Contact</a>
+</div>
+<script>
+    function openNav() {
+        if (document.getElementById("mySidebar").style.width == "64vw") {
+            document.getElementById("mySidebar").style.width = "0";
+        } else {
+            document.getElementById("mySidebar").style.width = "64vw";
+        }
+    }
+    var currentHref = window.location.href
+    if (currentHref.includes('projects')) {
+        document.getElementById("projects").classList.add("active");
+        document.getElementById("projects").removeAttribute("href");
+        document.getElementById("sidenav-projects").classList.add("active");
+        document.getElementById("sidenav-projects").removeAttribute("href");
+    } else if (currentHref.includes('about')) {
+        document.getElementById("about").classList.add("active");
+        document.getElementById("about").removeAttribute("href");
+        document.getElementById("sidenav-about").classList.add("active");
+        document.getElementById("sidenav-about").removeAttribute("href");
+    } else if (currentHref.includes('contact')) {
+        document.getElementById("contact").classList.add("active");
+        document.getElementById("contact").removeAttribute("href");
+        document.getElementById("sidenav-contact").classList.add("active");
+        document.getElementById("sidenav-contact").removeAttribute("href");
+    } else {
+        document.getElementById("home").classList.add("active");
+        document.getElementById("home").removeAttribute("href");
+        document.getElementById("sidenav-home").classList.add("active");
+        document.getElementById("sidenav-home").removeAttribute("href");
+    }
+</script>

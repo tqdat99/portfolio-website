@@ -18,13 +18,11 @@ body {
     padding: 24px;
 }
 
-.navbar-active {
-    font-weight: 600;
-    color: #4B4D4B;
-    text-align: center;
+.active {
+    color: #4B4D4B!important;
 }
 
-.navbar-inactive {
+.navbar-option {
     font-weight: 600;
     color: rgb(212, 205, 205);
     text-align: center;
@@ -129,7 +127,7 @@ a {
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: 50% 0.88vh;
-    margin-top: 0vh;
+    margin-top: 4vh;
     margin-bottom: 8.8vh;
     padding-bottom: 2vh;
 }
@@ -168,12 +166,12 @@ a {
 }
 
 .contact {
-    font: 40px "Montserrat";
+    font: 3.2vw "Montserrat";
     font-weight: 600;
     color: #2C2828;
-    letter-spacing: 0.08rem;
+    letter-spacing: 0.08vw;
     float: right;
-    line-height: 80px;
+    line-height: 5.6vw;
 }
 
 p {
@@ -260,8 +258,8 @@ a:hover {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    padding-right: 24%;
-    padding-left: 24%;
+    padding-right: 8vw;
+    padding-left: 8vw;
     text-align: center;
 }
 
@@ -290,7 +288,21 @@ a:hover {
 }
 
 .avatar-section {
-    margin-bottom: 4vw;
+    margin-bottom: 8vh;
+}
+
+.hamburger {
+    height: 0;
+    width: 8vw;
+    visibility: hidden;
+}
+
+.navbar-options {
+    visibility: visible;
+}
+
+.my-nav {
+    padding: 4vh 4vw 4vh 8vw;
 }
 
 @media (max-width: 767px) {
@@ -301,9 +313,6 @@ a:hover {
     .name-section {
         padding-left: 0px;
         padding-right: 0px;
-    }
-    .hero-section {
-        margin-bottom: 6.4vh;
     }
     .last-name {
         font-size: 11vw;
@@ -334,4 +343,88 @@ a:hover {
     .hero-section {
         margin-bottom: 6.4vh;
     }
+    .avatar-section {
+        margin-bottom: 6.4vh;
+    }
+    .contact {
+        text-align: start;
+        font-size: 6.4vw;
+        line-height: 12vw;
+    }
+    .contact-section {
+        padding-right: 2vw;
+        padding-left: 2vw;
+    }
+    .hamburger {
+        height: auto;
+        visibility: visible;
+    }
+    .navbar-options {
+        display: none;
+    }
+    .my-nav {
+        padding: 2vh 6.4vw 2vh 6.4vw;
+        height: 12vh;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+    }
+    .my-section {
+        padding-top: calc(12vh + 4vh);
+    }
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 12vh;
+    right: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 4vh;
+}
+
+.sidebar .sidebar-option {
+    padding: 0 4vw 0 4vw;
+    margin-bottom: 4vw;
+    font: 32px "Montserrat";
+    font-weight: 600;
+    color: rgb(212, 205, 205);
+    display: block;
+    transition: 0.3s;
+    text-align: end;
+    padding-right: 8vw;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    font-size: 36px;
+}
+
+.openbtn {
+    height: 100%;
+    font-size: 3.2vw;
+    cursor: pointer;
+    color: #4B4D4B;
+    background-color: #ffffff;
+    border: 0.16vw solid rgb(194, 198, 202);
+    border-radius: 1.6vw;
+    padding: 10px 15px;
+}
+
+.openbtn:hover {
+    background-color: rgb(241, 235, 235);
+}
+
+#main {
+    transition: margin-right .5s;
+    padding: 16px;
 }
