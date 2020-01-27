@@ -1,7 +1,9 @@
 body {
-    padding-left: 8%;
-    padding-right: 8%;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.my-section {
+    padding: 4vh 8vw 4vh 8vw;
 }
 
 .my-logo {
@@ -29,14 +31,14 @@ body {
 }
 
 .last-name {
-    font: 72px "Montserrat";
+    font: 4vw "Montserrat";
     font-weight: 400;
     color: #2C2828;
     width: 100%;
 }
 
 .first-name {
-    font: 96px "Montserrat";
+    font: 6vw "Montserrat";
     font-weight: 700;
     color: #2C2828;
     width: 100%;
@@ -50,18 +52,16 @@ body {
 }
 
 a {
-    margin-top: 40px;
     color: #2C2828;
 }
 
 .my-link {
     width: 100%;
-    font: 16px "Montserrat";
+    font: 1.2vw "Montserrat";
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.16rem;
-    padding: 8px 8px 8px 0px;
-    margin-top: 32px;
+    margin-top: 4%;
     -webkit-transition: letter-spacing 0.3s;
     transition: letter-spacing 0.3s;
 }
@@ -88,8 +88,8 @@ a {
     transform: scale(1.1);
 }
 
-.project-session {
-    padding: 16px;
+.project-section {
+    padding: 0 4vw 8vh 4vw;
 }
 
 .square {
@@ -97,7 +97,6 @@ a {
     position: relative;
     width: 100%;
     padding-bottom: 100%;
-    margin: 1.66%;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -115,8 +114,29 @@ a {
     box-shadow: 0px 16px 40px 0px rgba(42, 46, 42, 0.16);
 }
 
-.col-title {
-    padding-left: 56px;
+.project-thumbnail-section {
+    padding: 0;
+}
+
+.title {
+    font: 2.4vw "Montserrat";
+    font-weight: 700;
+    color: #2C2828;
+    display: inline-block;
+    font-size: 40;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #27A08D, #27A08D);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 50% 0.88vh;
+    margin-top: 0vh;
+    margin-bottom: 8.8vh;
+    padding-bottom: 2vh;
+}
+
+.title-section {
+    padding-left: 4.8vw;
+    padding-right: 0;
 }
 
 .right-align {
@@ -131,24 +151,8 @@ a {
     background-image: url('/images/project-2.jpg');
 }
 
-h2 {
-    font: 48px "Montserrat";
-    font-weight: 700;
-    color: #2C2828;
-    margin-top: 64px;
-    margin-bottom: 72px;
-    padding-bottom: 24px;
-    display: inline-block;
-    font-size: 40;
-    text-decoration: none;
-    background-image: linear-gradient(to right, #27A08D, #27A08D);
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: 50% 8px;
-}
-
-.project-session .project-title {
-    font: 40px "Montserrat";
+.project-section .project-title {
+    font: 2.4vw "Montserrat";
     font-weight: 600;
     color: #2C2828;
     letter-spacing: 0.08rem;
@@ -156,7 +160,7 @@ h2 {
 }
 
 .greeting {
-    font: 72px "Montserrat";
+    font: 4.8vw "Montserrat";
     font-weight: 600;
     color: #2C2828;
     letter-spacing: 0.08rem;
@@ -211,9 +215,8 @@ span.green {
 
 .arrow::after {
     display: inline-block;
-    padding-left: 16px;
+    padding-left: 2%;
     content: url("/images/link-arrow.svg");
-    /* content: "\0279E"; */
     -webkit-transition: transform 0.3s ease-out;
     -webkit-transition: -webkit-transform 0.3s ease-out;
     transition: -webkit-transform 0.3s ease-out;
@@ -243,16 +246,16 @@ a:hover {
 
 .footer {
     /* height: 18%; */
-    padding-top: 40px;
-    padding-bottom: 32px;
-    margin-top: 48px;
+    padding-top: 4.8vh;
+    padding-bottom: 3.2vh;
+    margin-top: 4vh;
 }
 
 .header {
     /* height: 10%; */
 }
 
-.contact-session {
+.contact-section {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -271,23 +274,64 @@ a:hover {
     /* display: flex!important; */
 }
 
-
-/* @media (min-width: 770px) {
-    .navbar-expand-lg .navbar-toggler {
-        display: none;
-    }
-} */
-
-@media (min-width: 770px) {
-    .home-session {
-        padding-left: 8%;
-        padding-right: 8%;
-        height: 70%;
-    }
+.home-section {
+    padding-left: 8%;
+    padding-right: 4%;
 }
 
-@media (min-width: 770px) {
-    .name-session {
-        padding-left: 64px;
+.name-section {
+    padding-left: 3.2vw;
+    padding-right: 0px;
+}
+
+.project-container {
+    padding-left: 4.8vw;
+    padding-right: 4.8vw;
+}
+
+.avatar-section {
+    margin-bottom: 4vw;
+}
+
+@media (max-width: 767px) {
+    .home-section {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+    .name-section {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .hero-section {
+        margin-bottom: 6.4vh;
+    }
+    .last-name {
+        font-size: 11vw;
+    }
+    .first-name {
+        font-size: 13vw;
+    }
+    .my-link {
+        font-size: 3.2vw;
+        margin-top: 4.8vw;
+    }
+    .project-section .project-title {
+        font-size: 4.8vw;
+        margin-top: 4.8vw;
+    }
+    .title-section {
+        padding-left: 4vw;
+    }
+    .title {
+        font-size: 7.2vw;
+        margin-bottom: 8vh;
+    }
+    .greeting {
+        font-size: 8.8vw;
+        text-align: left;
+        margin-bottom: 7.2vh;
+    }
+    .hero-section {
+        margin-bottom: 6.4vh;
     }
 }
