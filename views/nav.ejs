@@ -11,17 +11,23 @@
     </nav>
 </div>
 <div id="mySidebar" class="sidebar hamburger">
-    <p id="sidenav-home" class="sidebar-option" href="/">Home</p>
+    <a id="sidenav-home" class="sidebar-option" href="/">Home</a>
     <a id="sidenav-projects" class="sidebar-option" href="/projects">Projects</a>
     <a id="sidenav-about" class="sidebar-option" href="/about">About</a>
     <a id="sidenav-contact" class="sidebar-option" href="/contact">Contact</a>
+</div>
+<div id="myOverlay" class="overlay" onclick="openNav()">
 </div>
 <script>
     function openNav() {
         if (document.getElementById("mySidebar").style.width == "64vw") {
             document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("myOverlay").style.visibility = "hidden";
+            document.getElementById("myOverlay").style.opacity = "0";
         } else {
             document.getElementById("mySidebar").style.width = "64vw";
+            document.getElementById("myOverlay").style.visibility = "visible";
+            document.getElementById("myOverlay").style.opacity = "1"
         }
     }
     var currentHref = window.location.href

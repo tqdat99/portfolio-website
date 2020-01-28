@@ -367,7 +367,10 @@ a:hover {
         height: 12vw;
         width: 100%;
         position: fixed;
-        z-index: 1;
+        z-index: 2;
+        -webkit-box-shadow: 0px 8px 24px 0px rgba(57, 64, 57, 0.16);
+        -moz-box-shadow: 0px 8px 24px 0px rgba(57, 64, 57, 0.16);
+        box-shadow: 0px 8px 24px 0px rgba(57, 64, 57, 0.16);
     }
     .my-section {
         padding-top: calc(12vh + 4vh);
@@ -378,19 +381,19 @@ a:hover {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
-    top: 12vh;
+    z-index: 2;
+    top: 12vw;
     right: 0;
     background-color: #ffffff;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 4vh;
+    padding-top: 6vh;
 }
 
 .sidebar .sidebar-option {
     padding: 0 4vw 0 4vw;
     margin-bottom: 4vw;
-    font: 32px "Montserrat";
+    font: 8vw "Montserrat";
     font-weight: 600;
     color: rgb(212, 205, 205);
     display: block;
@@ -428,3 +431,33 @@ a:hover {
     transition: margin-right .5s;
     padding: 16px;
 }
+
+.overlay {
+    position: fixed;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+
+/* #overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: 5s;
+} */
