@@ -363,8 +363,8 @@ a:hover {
         display: none;
     }
     .my-nav {
-        padding: 2vh 6.4vw 2vh 6.4vw;
-        height: 12vh;
+        padding: 2.4vh 4.8vw 2.4vh 4.8vw;
+        height: 12vw;
         width: 100%;
         position: fixed;
         z-index: 1;
