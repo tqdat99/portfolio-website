@@ -1,34 +1,3 @@
-window.onload = function() {
-
-    setTimeout(function() {
-
-        // reference to <head>
-        var head = document.getElementsByTagName('head')[0];
-
-        // // a new CSS
-        // var css = document.createElement('link');
-        // css.type = "text/css";
-        // css.rel = "stylesheet";
-        // css.href = "stylesheet";
-
-        // // a new JS
-        // var js = document.createElement("script");
-        // js.type = "text/javascript";
-        // js.src = "http://domain.tld/preload.js";
-
-        // preload JS and CSS
-        // head.appendChild(css);
-        // head.appendChild(js);
-
-        // preload image
-        new Image().src = "/images/project-1.jpg";
-        new Image().src = "/images/project-2.jpg";
-        new Image().src = "/images/hero.png";
-        new Image().src = "/images/about.png";
-
-    }, 1000);
-}
-
 function openNav() {
     if (document.getElementById("mySidebar").style.width == "64vw") {
         document.getElementById("mySidebar").style.width = "0";

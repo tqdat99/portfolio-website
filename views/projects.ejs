@@ -15,9 +15,42 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="stylesheets/style.css" rel="stylesheet">
     <link href="stylesheets/animate.css" rel="stylesheet">
+    <script>
+        window.onload = function() {
+
+            setTimeout(function() {
+
+                // reference to <head>
+                var head = document.getElementsByTagName('head')[0];
+
+                // // a new CSS
+                // var css = document.createElement('link');
+                // css.type = "text/css";
+                // css.rel = "stylesheet";
+                // css.href = "stylesheet";
+
+                // // a new JS
+                // var js = document.createElement("script");
+                // js.type = "text/javascript";
+                // js.src = "http://domain.tld/preload.js";
+
+                // preload JS and CSS
+                // head.appendChild(css);
+                // head.appendChild(js);
+
+                // preload image
+                new Image().src = "/images/project-1.jpg";
+                new Image().src = "/images/project-2.jpg";
+                new Image().src = "/images/hero.png";
+                new Image().src = "/images/about.png";
+
+            }, 10000);
+        }
+    </script>
 </head>
 
 <body>
+
     <!-- <div id="loading">
         <img id="loading-image" src="images/ajax-loader.gif" alt="Loading..." />
     </div> -->
@@ -31,29 +64,28 @@
             <div class="project-container">
                 <div class="row project-section">
                     <div class="col-md-6 project-thumbnail-section">
-                        <a href="#">
+                        <a href="https://medium.com/@tqdat99/how-we-won-the-facebook-developer-circles-innovation-challenge-ab83226c45e4">
                             <div class="square project-1 animated fadeInUpShort delay-025s">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-6 d-flex align-content-center flex-wrap title-section">
-                        <a href="#" class="project-title animated fadeInUpTitle delay-05s">How we won the Facebook Developer Circles Innovation Challenge</a>
-                        <a href="/projects" class="my-link arrow animated fadeInUp delay-05s">read more</a>
+                        <a href="https://medium.com/@tqdat99/how-we-won-the-facebook-developer-circles-innovation-challenge-ab83226c45e4" class="project-title animated fadeInUpTitle delay-05s">How we won the Facebook Developer Circles Innovation Challenge</a>
+                        <a href="https://medium.com/@tqdat99/how-we-won-the-facebook-developer-circles-innovation-challenge-ab83226c45e4" class="my-link arrow animated fadeInUp delay-05s">read more</a>
 
                     </div>
                 </div>
 
                 <div class="row project-section">
                     <div class="col-md-6 project-thumbnail-section">
-                        <a href="#">
-                            <div class="square project-1 animated fadeInUpShort delay-025s">
+                        <a href="/projects/my-very-first-step-from-motion-design-to-ui-design" target="_blank">
+                            <div class="square project-2 animated fadeInUpShort delay-025s">
                             </div>
                         </a>
                     </div>
                     <div class="col-md-6 d-flex align-content-center flex-wrap title-section">
-                        <a href="#" class="project-title animated fadeInUpTitle delay-05s">How we won the Facebook Developer Circles Innovation Challenge</a>
-                        <a href="/projects" class="my-link arrow animated fadeInUp delay-05s">read more</a>
-
+                        <a href="https://www.notion.so/New-look-new-story-xotours-vn-9a8bb78953cf41ff85e0612fb389298d" class="project-title animated fadeInUpTitle delay-05s" target="_blank">My very first step from Motion Design to UI Design</a>
+                        <a href="https://www.notion.so/New-look-new-story-xotours-vn-9a8bb78953cf41ff85e0612fb389298d" class="my-link arrow animated fadeInUp delay-05s" target="_blank">read more</a>
                     </div>
                 </div>
 

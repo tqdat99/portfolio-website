@@ -18,4 +18,8 @@ router.get('/contact', function(req, res, next) {
     res.render('contact');
 });
 
+router.get('/projects/my-very-first-step-from-motion-design-to-ui-design', function(req, res, next) {
+    res.render('New look new story xotours vn');
+});
+
 module.exports = router;

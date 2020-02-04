@@ -26,6 +26,11 @@ body {
     font-weight: 600;
     color: rgb(212, 205, 205);
     text-align: center;
+    transition: 0.4s;
+}
+
+.navbar-option:hover {
+    color: rgb(156, 148, 148);
 }
 
 .last-name {
@@ -155,6 +160,12 @@ a {
     color: #2C2828;
     letter-spacing: 0.08rem;
     float: right;
+    transition: 0.4s;
+}
+
+.project-section .project-title:hover {
+    color: #27A08D;
+    letter-spacing: 0.16rem;
 }
 
 .greeting {
@@ -189,6 +200,13 @@ span.green {
 
 .green-link {
     color: #27A08D;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: 0.4s;
+}
+
+.green-link:hover {
+    color: rgb(43, 226, 199);
     font-weight: 600;
     text-decoration: underline;
 }
@@ -332,6 +350,7 @@ a:hover {
         padding-left: 4vw;
     }
     .title {
+        margin-top: 2vh;
         font-size: 7.2vw;
         margin-bottom: 8vh;
     }
@@ -373,7 +392,7 @@ a:hover {
         box-shadow: 0px 8px 24px 0px rgba(57, 64, 57, 0.16);
     }
     .my-section {
-        padding-top: calc(12vh + 4vh);
+        padding-top: calc(10vh + 8vw);
     }
 }
 
