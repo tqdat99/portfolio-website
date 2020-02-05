@@ -22,4 +22,8 @@ router.get('/projects/my-very-first-step-from-motion-design-to-ui-design', funct
     res.render('New look new story xotours vn');
 });
 
+router.get('/test', function(req, res, next) {
+    res.render('test');
+})
+
 module.exports = router;

@@ -15,49 +15,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="stylesheets/style.css" rel="stylesheet">
     <link href="stylesheets/animate.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="preload" as="image" href="images/project-1.jpg">
     <link rel="preload" as="image" href="images/project-2.jpg">
     <link rel="preload" as="image" href="images/about.png">
     <link rel="preload" as="image" href="images/hero.png">
-    <script>
-        window.onload = function() {
-
-            setTimeout(function() {
-
-                // reference to <head>
-                var head = document.getElementsByTagName('head')[0];
-
-                // // a new CSS
-                // var css = document.createElement('link');
-                // css.type = "text/css";
-                // css.rel = "stylesheet";
-                // css.href = "stylesheet";
-
-                // // a new JS
-                // var js = document.createElement("script");
-                // js.type = "text/javascript";
-                // js.src = "http://domain.tld/preload.js";
-
-                // preload JS and CSS
-                // head.appendChild(css);
-                // head.appendChild(js);
-
-                // preload image
-                new Image().src = "/images/project-1.jpg";
-                new Image().src = "/images/project-2.jpg";
-                new Image().src = "/images/hero.png";
-                new Image().src = "/images/about.png";
-
-            }, 10000);
-        }
-    </script>
 </head>
 
 <body>
-
-    <!-- <div id="loading">
-        <img id="loading-image" src="images/ajax-loader.gif" alt="Loading..." />
-    </div> -->
     <%include nav.ejs%>
         <div class="my-section">
 
@@ -95,6 +60,8 @@
             </div>
         </div>
         <%include footer.ejs%>
+            </div>
+
             <script src="javascripts/script.js"></script>
 
 </body>
