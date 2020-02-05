@@ -1,0 +1,160 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/images/icon.png">
+
+    <title>Projects</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preload" as="image" href="images/project-1.jpg">
+    <link rel="preload" as="image" href="images/project-2.jpg">
+    <link rel="preload" as="image" href="images/about.png">
+    <link rel="preload" as="image" href="images/hero.png">
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="stylesheets/animate.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Nav tabs -->
+    <div class="my-nav d-flex flex-md-row align-items-center bg-white border-bottom box-shadow justify-content-between">
+        <a href="/" class="/-brand d-flex align-items-center my-0 mr-md-auto font-weight-normal">
+            <img src="/images/logo.png" class="my-logo">
+        </a>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link p-2 navbar-p navbar-option active" data-toggle="tab" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-2 navbar-p navbar-option" data-toggle="tab" href="#menu1">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-2 navbar-p navbar-option" data-toggle="tab" href="#menu2">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-2 navbar-p navbar-option" data-toggle="tab" href="#menu3">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div id="home" class="tab-pane active"><br>
+            <div class="my-section">
+                <div class="row d-flex align-content-center flex-wrap home-section">
+                    <div class="col-md-5 d-flex align-items-center flex-column hero-section ">
+                        <img src="images/hero.png" class="my-hero animated fadeIn ">
+                    </div>
+                    <div class="col-md-7 d-flex align-content-center flex-wrap name-section">
+                        <h1 class="last-name animated fadeInUp d-flex">TRƯƠNG</h1>
+                        <h1 class="first-name last-name animated fadeInUp delay-025s">QUỐC ĐẠT</h1>
+                        <a href="/projects" class="my-link arrow animated fadeInUp delay-05s">my projects</a>
+                    </div>
+                </div>
+            </div>
+            <%include footer.ejs%>
+                <script src="javascripts/script.js"></script>
+        </div>
+        <div id="menu1" class="tab-pane fade"><br>
+
+            <div class="my-section">
+
+                <div class="container text-center">
+                    <h2 class="animated animated fadeIn title">Projects</h2>
+                </div>
+
+                <div class="project-container">
+                    <div class="row project-section">
+                        <div class="col-md-6 project-thumbnail-section">
+                            <a href="https://medium.com/@tqdat99/how-we-won-the-facebook-developer-circles-innovation-challenge-ab83226c45e4" target="_blank">
+                                <div class="square project-1 animated fadeInUpShort delay-025s">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6 d-flex align-content-center flex-wrap title-section">
+                            <a href="https://medium.com/@tqdat99/how-we-won-the-facebook-developer-circles-innovation-challenge-ab83226c45e4" class="project-title animated fadeInUpTitle delay-05s" target="_blank">How we won the Facebook Developer Circles Innovation Challenge</a>
+                            <a href="https://medium.com/@tqdat99/how-we-won-the-facebook-developer-circles-innovation-challenge-ab83226c45e4" class="my-link arrow animated fadeInUp delay-05s" target="_blank">read more</a>
+                        </div>
+                    </div>
+
+                    <div class="row project-section">
+                        <div class="col-md-6 project-thumbnail-section">
+                            <a href="/projects/my-very-first-step-from-motion-design-to-ui-design" target="_blank">
+                                <div class="square project-2 animated fadeInUpShort delay-025s">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6 d-flex align-content-center flex-wrap title-section">
+                            <a href="https://www.notion.so/New-look-new-story-xotours-vn-9a8bb78953cf41ff85e0612fb389298d" class="project-title animated fadeInUpTitle delay-05s" target="_blank">My very first step from Motion Design to UI Design</a>
+                            <a href="https://www.notion.so/New-look-new-story-xotours-vn-9a8bb78953cf41ff85e0612fb389298d" class="my-link arrow animated fadeInUp delay-05s" target="_blank">read more</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <%include footer.ejs%>
+                <script src="javascripts/script.js"></script>
+
+        </div>
+        <div id="menu2" class="tab-pane fade"><br>
+
+
+
+            <div class="my-section">
+                <div class="container text-center">
+                    <h2 class="animated animated fadeIn title">About me</h2>
+                </div>
+
+                <div class="container d-flex justify-content-center avatar-section">
+                    <img src="images/about.png" class="my-hero animated fadeIn delay-025s">
+                </div>
+
+                <div class="container">
+                    <div class="row project-row ">
+                        <div class="col-md-6">
+                            <p class="greeting right-align animated fadeIn delay-05s">It’s been a pleasure meeting you</p>
+                        </div>
+                        <div class="col-md-6 d-flex align-content-center flex-wrap col-title animated fadeIn delay-075s">
+                            <p>Hi, I’m
+                                <span class="green">Truong Quoc Dat</span>.
+                            </p>
+                            <p> I’m studying software development at Facaulty of Information Technology, University of Science, Vietnam National University. I’m now looking for an internship as a <span class="green">product designer</span> or a
+                                <span class="green">web developer</span>. You can download my CV <a href="CV.pdf" class="green-link" download>here</a>.
+                                <br/><br/>Moreover, I have a special love for <span class="green">motion design</span>. I’m also available for short freelance motion projects. For example, some onboarding screens for mobile apps.
+                                <br/><br/> Wish you a nice day!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%include footer.ejs%>
+                <script src="javascripts/script.js"></script>
+        </div>
+        <div id="menu3" class="tab-pane fade"><br>
+
+
+
+            <div class="my-section">
+                <div class="container text-center">
+                    <h2 class="animated animated fadeIn title">Contact</h2>
+                </div>
+                <div class="contact-section animated fadeIn delay-025s">
+                    <p class="contact">You can say hi to me through <a href="mailto:tqdat99@gmail.com?Subject=Hi" target="_top" class="green-link">tqdat99@gmail.com</a> or <a href="https://www.facebook.com/tqdat99" class="green-link" target="_blank">Facebook</a>.
+                        </br>Otherwise, check my <a href="https://www.linkedin.com/in/tqdat99/" class="green-link" target="_blank">Linkedin</a>,
+                        <a href="https://dribbble.com/tqdat99" class="green-link" target="_blank">Dribbble</a>, <a href="https://vimeo.com/tqdat99" class="green-link" target="_blank">Vimeo</a>.
+                    </p>
+                </div>
+            </div>
+            <%include footer.ejs%>
+
+                <script src="javascripts/script.js"></script>
+        </div>
+
+</body>
+
+</html>
