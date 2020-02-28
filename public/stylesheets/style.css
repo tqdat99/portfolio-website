@@ -9,15 +9,12 @@ body {
 }
 
 .my-logo {
-    max-width: 64px;
-    height: auto;
-    width: auto;
+    width: 8%;
 }
 
 .navbar-p {
-    font: 16px "Montserrat";
-    margin-right: 32px;
-    padding: 24px;
+    font: 1vw "Montserrat";
+    margin-right: 2.4vw;
 }
 
 .active {
@@ -51,6 +48,11 @@ body {
 
 .my-hero {
     width: 24vw;
+    height: auto;
+}
+
+.my-about {
+    width: 32vw;
     height: auto;
 }
 
@@ -126,7 +128,6 @@ a {
     font-weight: 700;
     color: #2C2828;
     display: inline-block;
-    font-size: 40;
     text-decoration: none;
     background-image: linear-gradient(to right, #27A08D, #27A08D);
     background-position: bottom center;
@@ -185,11 +186,22 @@ a {
     line-height: 4vw;
 }
 
+.about-section {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-col {
+    padding-left: 1.6vw;
+    padding-right: 1.6vw;
+}
+
 p {
-    font: 18px "Montserrat";
+    font: 1.2vw "Montserrat";
     font-weight: 400;
     color: #2C2828;
-    line-height: 32px;
+    line-height: 2.4vw;
     display: inline;
 }
 
@@ -315,6 +327,7 @@ a:hover {
 }
 
 .navbar-options {
+    flex-wrap: inherit !important;
     visibility: visible;
 }
 
