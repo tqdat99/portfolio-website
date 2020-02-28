@@ -71,6 +71,17 @@ a {
     transition: letter-spacing 0.3s;
 }
 
+.my-home-link {
+    width: 100%;
+    font: 1.2vw "Montserrat";
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.16rem;
+    margin-top: 4%;
+    -webkit-transition: letter-spacing 0.3s;
+    transition: letter-spacing 0.3s;
+}
+
 .my-link:hover {
     letter-spacing: 0.32rem;
 }
@@ -354,7 +365,7 @@ a:hover {
 
 @media (max-width: 767px) {
     p {
-        font: 4vw "Montserrat";
+        font: 4.8vw "Montserrat";
         line-height: 7.2vw;
     }
     .single-fold {
@@ -377,9 +388,13 @@ a:hover {
         font-size: 6vh;
     }
     .my-link {
-        text-align: center;
         font-size: 3.2vw;
         margin-top: 4.8vw;
+    }
+    .my-home-link {
+        text-align: center;
+        font-size: 1.6vh;
+        margin-top: 2.4vh;
     }
     .project-section .project-title {
         font-size: 4.8vw;
