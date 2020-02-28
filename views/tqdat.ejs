@@ -182,7 +182,12 @@
             <script src='https://labs.nearpod.com/bodymovin/demo/markus/halloween/lottie.min.js'></script>
             <script src="javascripts/script.js"></script>
             <script>
-                /* Shapes */
+                $('#to-project-button').click(function(e) {
+                    e.preventDefault();
+                    $('.nav a[href="#project"]').tab('show');
+                })
+            </script>
+            <script>
                 var container = document.getElementById('mailContainer');
                 var animItem = bodymovin.loadAnimation({
                     wrapper: container,
