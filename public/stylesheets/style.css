@@ -5,6 +5,7 @@ body {
 
 .my-section {
     padding: 4vh 8vw 4vh 8vw;
+    margin: 0;
 }
 
 .my-logo {
@@ -49,10 +50,8 @@ body {
 }
 
 .my-hero {
-    max-width: 100%;
-    max-height: 100%;
+    width: 24vw;
     height: auto;
-    width: auto;
 }
 
 a {
@@ -178,12 +177,12 @@ a {
 }
 
 .contact {
-    font: 3.2vw "Montserrat";
+    font: 2.2vw "Montserrat";
     font-weight: 600;
     color: #2C2828;
     letter-spacing: 0.08vw;
     float: right;
-    line-height: 5.6vw;
+    line-height: 4vw;
 }
 
 p {
@@ -255,24 +254,23 @@ a:hover {
 }
 
 .footer-text {
-    font: 12px "Montserrat";
+    font: 0.8vw "Montserrat";
     font-weight: 400;
-    letter-spacing: 0.24rem;
+    letter-spacing: 0.32vw;
     display: block;
+    margin-top: 0.8vw;
+    margin-bottom: 0.8vw;
+    line-height: 2vw;
 }
 
 .footer {
-    /* height: 18%; */
-    padding-top: 4.8vh;
-    padding-bottom: 3.2vh;
-    margin-top: 4vh;
-}
-
-.header {
-    /* height: 10%; */
+    height: 16%;
+    border-top: 0.04vw solid #dee2e6!important;
+    align-items: center;
 }
 
 .contact-section {
+    height: 100%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -294,7 +292,6 @@ a:hover {
 .home-section {
     padding-left: 8%;
     padding-right: 4%;
-    height: 60vh;
 }
 
 .name-section {
@@ -321,14 +318,31 @@ a:hover {
     visibility: visible;
 }
 
+.single-fold {
+    height: 72%;
+}
+
+.brand {
+    height: 100%;
+}
+
 .my-nav {
+    height: 12%;
     padding: 4vh 4vw 4vh 8vw;
+    border-bottom: 0.04vw solid #dee2e6!important;
+}
+
+#mailContainer {
+    width: 12vw;
+    height: 12vw;
+    margin-bottom: 2vw;
+    display: flex;
 }
 
 @media (max-width: 767px) {
     .home-section {
-        padding-left: 4vw;
-        padding-right: 4vw;
+        padding-left: 12vw;
+        padding-right: 12vw;
     }
     .name-section {
         padding-left: 0px;
@@ -409,6 +423,13 @@ a:hover {
         opacity: 0;
         z-index: 1;
         transition: 0.5s;
+    }
+    #mailContainer {
+        max-width: 24vw;
+        max-height: 24vw;
+        margin-bottom: 4vw;
+        display: flex;
+        align-items: flex-start;
     }
 }
 
