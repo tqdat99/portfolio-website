@@ -353,19 +353,26 @@ a:hover {
 }
 
 @media (max-width: 767px) {
+    p {
+        font: 4vw "Montserrat";
+        line-height: 7.2vw;
+    }
+    .single-fold {
+        height: 88%;
+    }
     .home-section {
-        padding-left: 12vw;
-        padding-right: 12vw;
+        padding-left: 6vw;
+        padding-right: 6vw;
     }
     .name-section {
         padding-left: 0px;
         padding-right: 0px;
     }
     .last-name {
-        font-size: 11vw;
+        font-size: 4vh;
     }
     .first-name {
-        font-size: 13vw;
+        font-size: 6vh;
     }
     .my-link {
         font-size: 3.2vw;
@@ -411,8 +418,8 @@ a:hover {
         display: none;
     }
     .my-nav {
-        padding: 4vh 4.8vw 4vh 4.8vw;
-        height: 12vw;
+        padding: 4vw 4.8vw 4vw 4.8vw;
+        height: 16vw;
         width: 100%;
         position: fixed;
         z-index: 2;
@@ -421,7 +428,7 @@ a:hover {
         box-shadow: 0px 8px 24px 0px rgba(57, 64, 57, 0.16);
     }
     .my-section {
-        padding-top: calc(10vh + 8vw);
+        padding-top: calc(8vh + 4vw);
     }
     .overlay {
         position: fixed;
@@ -443,6 +450,29 @@ a:hover {
         margin-bottom: 4vw;
         display: flex;
         align-items: flex-start;
+    }
+    .my-hero {
+        width: auto;
+        height: 40vh;
+    }
+    .my-about {
+        width: 80vw;
+        height: auto;
+    }
+    .my-logo {
+        width: 16%;
+    }
+    .footer-text {
+        font: 2.4vw "Montserrat";
+        font-weight: 400;
+        letter-spacing: 0.8vw;
+        margin-top: 0.8vw;
+        margin-bottom: 0.8vw;
+        line-height: 4vw;
+    }
+    .footer {
+        height: 12%;
+        border-top: 0.04vw solid #dee2e6!important;
     }
 }
 
