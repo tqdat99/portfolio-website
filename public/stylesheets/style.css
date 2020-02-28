@@ -369,12 +369,15 @@ a:hover {
         padding-right: 0px;
     }
     .last-name {
+        text-align: center;
         font-size: 4vh;
     }
     .first-name {
+        text-align: center;
         font-size: 6vh;
     }
     .my-link {
+        text-align: center;
         font-size: 3.2vw;
         margin-top: 4.8vw;
     }
@@ -402,11 +405,11 @@ a:hover {
         margin-bottom: 6.4vh;
     }
     .contact {
-        text-align: start;
         font-size: 6.4vw;
         line-height: 12vw;
     }
     .contact-section {
+        padding-top: 16vw;
         padding-right: 2vw;
         padding-left: 2vw;
     }
@@ -445,8 +448,8 @@ a:hover {
         transition: 0.5s;
     }
     #mailContainer {
-        max-width: 24vw;
-        max-height: 24vw;
+        width: 24vw;
+        height: 24vw;
         margin-bottom: 4vw;
         display: flex;
         align-items: flex-start;
