@@ -81,12 +81,13 @@
     </div>
 
     <!-- Tab panes -->
+
     <div class="tab-content my-content">
         <div id="home" class="tab-pane active single-fold"><br>
             <div class="my-section row home-section" style="height: 100%;">
-                <div class="row d-flex align-content-center flex-wrap home-section">
-                    <div class="col-md-5 d-flex align-items-center flex-column hero-section">
-                        <img src="images/hero.png" class="my-hero animated fadeIn ">
+                <div class="row d-flex align-content-center flex-wrap home-section d-flex align-items-stretch">
+                    <div class="col-md-5 align-items-center flex-column hero-section">
+                        <div class="my-hero animated fadeIn" id="homeContainer"></div>
                     </div>
                     <div class="col-md-7 d-flex align-content-center flex-wrap name-section">
                         <h1 class="last-name animated fadeInUp">TRUONG</h1>
@@ -188,9 +189,16 @@
                 })
             </script>
             <script>
-                var container = document.getElementById('mailContainer');
+                var homeContainer = document.getElementById('homeContainer');
                 var animItem = bodymovin.loadAnimation({
-                    wrapper: container,
+                    wrapper: homeContainer,
+                    animType: 'svg',
+                    loop: true,
+                    path: 'images/home.json'
+                });
+                var mailContainer = document.getElementById('mailContainer');
+                var animItem = bodymovin.loadAnimation({
+                    wrapper: mailContainer,
                     animType: 'svg',
                     loop: true,
                     path: 'images/mail.json'

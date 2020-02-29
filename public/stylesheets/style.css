@@ -47,7 +47,6 @@ body {
 }
 
 .my-hero {
-    width: 24vw;
     height: auto;
 }
 
@@ -65,7 +64,7 @@ a {
     font: 1.2vw "Montserrat";
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.16rem;
+    letter-spacing: 0.32vw;
     margin-top: 4%;
     -webkit-transition: letter-spacing 0.3s;
     transition: letter-spacing 0.3s;
@@ -76,14 +75,18 @@ a {
     font: 1.2vw "Montserrat";
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.16rem;
+    letter-spacing: 0.32vw;
     margin-top: 4%;
     -webkit-transition: letter-spacing 0.3s;
     transition: letter-spacing 0.3s;
 }
 
+.my-home-link:hover {
+    letter-spacing: 0.4vw;
+}
+
 .my-link:hover {
-    letter-spacing: 0.32rem;
+    letter-spacing: 0.4vw;
 }
 
 .project-thumbnail {
@@ -256,6 +259,10 @@ span.green {
     display: inline-block;
     padding-left: 2%;
     content: url("/images/link-arrow.svg");
+    /* position: fixed;
+    top: 50%;
+    text-align: center;
+    translate: transform(-50%, -50%); */
     -webkit-transition: transform 0.3s ease-out;
     -webkit-transition: -webkit-transform 0.3s ease-out;
     transition: -webkit-transform 0.3s ease-out;
@@ -363,6 +370,10 @@ a:hover {
     display: flex;
 }
 
+.hero-section {
+    height: 100%;
+}
+
 @media (max-width: 767px) {
     p {
         font: 4.8vw "Montserrat";
@@ -414,7 +425,7 @@ a:hover {
         margin-bottom: 7.2vh;
     }
     .hero-section {
-        margin-bottom: 6.4vh;
+        height: auto;
     }
     .avatar-section {
         margin-bottom: 6.4vh;
