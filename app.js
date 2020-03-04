@@ -21,14 +21,6 @@ app.use(express.static(path.join(__dirname, 'views'), { maxAge: 3600 }));
 
 app.use('/', indexRouter);
 
-app.use((req, res, next) => {
-    if (req.protocol === 'http') {
-        console.log("http")
-        res.redirect(301, `https://${req.headers.host}${req.url}`);
-    }
-    next();
-});
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));
