@@ -5,51 +5,70 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('portfolio-website:server');
+var debug = require('debug')('portfolio-website:httpServer');
 var http = require('http');
+var https = require('https');
+var fs = require('fs');
 
-
-
-var ip = process.env.IP || '0.0.0.0';
-var port = normalizePort(process.env.PORT || '8080');
-app.set('port', port);
+var httpPort = normalizePort(process.env.PORT || '1234');
+var httpsPort = normalizePort(process.env.PORT || '8443');
+var hostname = 'tqdattest.com';
+var httpsOptions = {
+    cert: fs.readFileSync('tqdat_me.crt'),
+    ca: [
+        fs.readFileSync('SectigoRSADomainValidationSecureServerCA.crt'),
+        fs.readFileSync('AddTrustExternalCARoot.crt'),
+        fs.readFileSync('USERTrustRSAAddTrustCA.crt')
+    ],
+    key: fs.readFileSync('HSSL-5e5f1d282d00c.key')
+};
 
 /**
- * Create HTTP server.
+ * Create HTTP httpServer.
  */
 
-var server = http.createServer(app);
+var httpServer = http.createServer(app);
+var httpsServer = https.createServer(httpsOptions, app);
+
+app.use((req, res, next) => {
+    if (req.protocol === 'http') {
+        res.redirect(301, `https://${req.headers.host}${req.url}`);
+    }
+    next();
+});
 
 /**
- * Listen on provided port, on all network interfaces.
+ * Listen on provided httpPort, on all network interfaces.
  */
 
-server.listen(port, ip);
-server.on('error', onError);
-server.on('listening', onListening);
+httpServer.listen(httpPort);
+httpsServer.listen(httpsPort);
+
+httpServer.on('error', onError);
+httpServer.on('listening', onListening);
 
 /**
- * Normalize a port into a number, string, or false.
+ * Normalize a httpPort into a number, string, or false.
  */
 
 function normalizePort(val) {
-    var port = parseInt(val, 10);
+    var httpPort = parseInt(val, 10);
 
-    if (isNaN(port)) {
+    if (isNaN(httpPort)) {
         // named pipe
         return val;
     }
 
-    if (port >= 0) {
-        // port number
-        return port;
+    if (httpPort >= 0) {
+        // httpPort number
+        return httpPort;
     }
 
     return false;
 }
 
 /**
- * Event listener for HTTP server "error" event.
+ * Event listener for HTTP httpServer "error" event.
  */
 
 function onError(error) {
@@ -57,9 +76,9 @@ function onError(error) {
         throw error;
     }
 
-    var bind = typeof port === 'string' ?
-        'Pipe ' + port :
-        'Port ' + port;
+    var bind = typeof httpPort === 'string' ?
+        'Pipe ' + httpPort :
+        'Port ' + httpPort;
 
     // handle specific listen errors with friendly messages
     switch (error.code) {
@@ -77,13 +96,13 @@ function onError(error) {
 }
 
 /**
- * Event listener for HTTP server "listening" event.
+ * Event listener for HTTP httpServer "listening" event.
  */
 
 function onListening() {
-    var addr = server.address();
+    var addr = httpServer.address();
     var bind = typeof addr === 'string' ?
         'pipe ' + addr :
-        'port ' + addr.port;
+        'httpPort ' + addr.httpPort;
     debug('Listening on ' + bind);
 }
