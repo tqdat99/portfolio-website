@@ -36,7 +36,6 @@ app.use((req, res, next) => {
     }
     next();
 });
-
 /**
  * Listen on provided httpPort, on all network interfaces.
  */
