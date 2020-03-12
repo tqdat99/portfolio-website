@@ -579,7 +579,7 @@ a:hover {
     }
     .grid-sizer,
     .grid-item {
-        width: 50%;
+        width: 100%;
     }
     #shots .shot .shot-title {
         font: 2vw "Montserrat";
