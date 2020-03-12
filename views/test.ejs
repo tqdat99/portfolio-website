@@ -2,99 +2,19 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <title>CodePen - Dribbble Shots via v2 API</title>
+    <link rel="stylesheet" href="stylesheets/test.css">
 
-    <!--  Meta  -->
-    <meta charset="UTF-8" />
-    <title>Bodymovin Demo</title>
-
-    <!--  Styles  -->
 </head>
 
 <body>
     <!-- partial:index.partial.html -->
-    <h1 id="test">no</p>
-        <div id="svgContainer"></div>
-        <!-- partial -->
-        <script src='https://labs.nearpod.com/bodymovin/demo/markus/halloween/lottie.min.js'></script>
-        <script>
-            var svgContainer = document.getElementById('svgContainer');
+    <div id="shots"></div>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="javascripts/test.js"></script>
 
-            var animData1 = {
-                wrapper: svgContainer,
-                animType: 'svg',
-                loop: false,
-                path: 'images/markus2.json',
-            };
-            var animData2 = {
-                wrapper: svgContainer,
-                animType: 'svg',
-                loop: false,
-                path: 'images/loading.json',
-            };
-            // var animData3 = {
-            //     wrapper: svgContainer,
-            //     animType: 'svg',
-            //     loop: false,
-            //     path: 'https://assets3.lottiefiles.com/packages/lf20_avlPG4.json',
-            // };
-
-            // var anim = bodymovin.loadAnimation(animData1);
-            // anim.addEventListener('onComplete', () => {
-            //     console.log('complete');
-            //     document.getElementById('test').innerHTML = "yes";
-            // });
-
-            // anim.addEventListener('complete', () => {
-            //     document.getElementById('test').innerHTML = "yes";
-            // });
-
-
-
-            files = ['markus2.json', 'demo.json', 'loading.json'];
-            var i = 0;
-
-            for (i = 0; i < files.length - 1; i++) {
-                path = 'images/' + files[i];
-                console.log(path)
-                anim = bodymovin.loadAnimation({
-                    wrapper: svgContainer,
-                    animType: 'svg',
-                    loop: false,
-                    path: path,
-                });
-                anim.addEventListener('complete', () => {
-                    path = 'images/' + files[i + 1];
-                    lottie.destroy()
-                    anim = bodymovin.loadAnimation({
-                        wrapper: svgContainer,
-                        animType: 'svg',
-                        loop: false,
-                        path: path,
-                    });
-                })
-            }
-
-            // while (i < files.length) {
-            //     document.getElementById('test').innerHTML = i;
-
-            //     path = 'images/' + files[i];
-            //     anim = bodymovin.loadAnimation({
-            //         wrapper: svgContainer,
-            //         animType: 'svg',
-            //         loop: false,
-            //         path: path,
-            //     });
-            //     console.log(path);
-
-            //     anim.addEventListener('complete', () => {
-            //         // document.getElementById('test').innerHTML = i;
-            //         i++;
-            //     });
-            //     i++
-            // }
-
-            //var anim = bodymovin.loadAnimation(animData2);
-        </script>
 </body>
 
 </html>

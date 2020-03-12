@@ -108,7 +108,8 @@ a {
 }
 
 .project-section {
-    padding: 0 4vw 8vh 4vw;
+    padding: 0 0 8vh 0;
+    margin: 0;
 }
 
 .square {
@@ -180,7 +181,7 @@ a {
 
 .project-section .project-title:hover {
     color: #27A08D;
-    letter-spacing: 0.16rem;
+    letter-spacing: 0.1rem;
 }
 
 .greeting {
@@ -334,6 +335,11 @@ a:hover {
     padding-right: 4.8vw;
 }
 
+.shot-container {
+    padding-left: 4.8vw;
+    padding-right: 4.8vw;
+}
+
 .avatar-section {
     margin-bottom: 8vh;
 }
@@ -372,6 +378,74 @@ a:hover {
 
 .hero-section {
     height: 100%;
+}
+
+.grid {}
+
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.grid-sizer,
+.grid-item {
+    width: 33.333%;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}
+
+#shots {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#shots .shot {
+    position: relative;
+    display: block;
+    background: #27A08D;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+#shots .shot:hover img {
+    opacity: .0;
+}
+
+#shots .shot:hover .shot-title {
+    opacity: 1;
+}
+
+#shots .shot .shot-title {
+    font: 1.2vw "Montserrat";
+    font-weight: 700;
+    position: absolute;
+    width: calc(100% - 2rem);
+    padding: 4vw;
+    opacity: 0;
+    -webkit-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#shots .shot img {
+    display: block;
+    max-width: 100%;
+    -webkit-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
 }
 
 @media (max-width: 767px) {
@@ -502,6 +576,14 @@ a:hover {
     .footer {
         height: 12%;
         border-top: 0.04vw solid #dee2e6!important;
+    }
+    .grid-sizer,
+    .grid-item {
+        width: 50%;
+    }
+    #shots .shot .shot-title {
+        font: 2vw "Montserrat";
+        font-weight: 700;
     }
 }
 

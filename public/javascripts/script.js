@@ -1,3 +1,29 @@
+// Set the Access Token
+var accessToken = 'cce761cf79c0ff6bd426c573f0f7e7da61b3873c46f9d878d770c05fa6398d8a';
+
+// Call Dribble v2 API
+$.ajax({
+    url: 'https://api.dribbble.com/v2/user/shots?access_token=' + accessToken,
+    dataType: 'json',
+    type: 'GET',
+    success: function(data) {
+        if (data.length > 0) {
+            $.each(data.reverse(), function(i, val) {
+                $('#shots').prepend(
+                    '<div class="grid-item"><a class="shot" target="_blank" href="' + val.html_url + '" title="' + val.title + '"><div class="shot-title">' + val.title + '</div><img src="' + val.images.hidpi + '"/></div></a>'
+                )
+            })
+        } else {
+            $('#shots').append('<p>No shots yet!</p>');
+        }
+    }
+});
+
+$('#to-project-button').click(function(e) {
+    e.preventDefault();
+    $('.nav a[href="#works"]').tab('show');
+});
+
 function openNav() {
     if (document.getElementById("mySidebar").style.width == "64vw") {
         document.getElementById("mySidebar").style.width = "0";
@@ -8,7 +34,8 @@ function openNav() {
         document.getElementById("myOverlay").style.visibility = "visible";
         document.getElementById("myOverlay").style.opacity = "1"
     }
-}
+};
+
 var currentHref = window.location.href
 if (currentHref.includes('projects')) {
     document.getElementById("projects").classList.add("active");
@@ -31,3 +58,15 @@ if (currentHref.includes('projects')) {
     document.getElementById("sidenav-home").classList.add("active");
     document.getElementById("sidenav-home").removeAttribute("href");
 }
+
+var $grid = $('.grid').isotope({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    masonry: {
+        columnWidth: '.grid-sizer'
+    }
+});
+// layout Isotope after each image loads
+$grid.imagesLoaded().progress(function() {
+    $grid.isotope('layout');
+});

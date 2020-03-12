@@ -24,8 +24,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
     <link href="stylesheets/style.css" rel="stylesheet">
     <link href="stylesheets/animate.css" rel="stylesheet">
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158794000-1"></script>
@@ -54,7 +57,7 @@
                 <a class="nav-link p-2 navbar-p navbar-option active" data-toggle="tab" href="#home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link p-2 navbar-p navbar-option" data-toggle="tab" href="#project">Projects</a>
+                <a class="nav-link p-2 navbar-p navbar-option" data-toggle="tab" href="#works">Works</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link p-2 navbar-p navbar-option" data-toggle="tab" href="#about">About</a>
@@ -70,7 +73,7 @@
                 <a class="sidebar-option active" data-toggle="tab" href="#home">Home</a>
             </li>
             <li class="nav-item">
-                <a class="sidebar-option" data-toggle="tab" href="#project">Projects</a>
+                <a class="sidebar-option" data-toggle="tab" href="#works">Works</a>
             </li>
             <li class="nav-item">
                 <a class="sidebar-option" data-toggle="tab" href="#about">About</a>
@@ -100,12 +103,12 @@
                 </div>
             </div>
         </div>
-        <div id="project" class="tab-pane fade"><br>
+        <div id="works" class="tab-pane fade"><br>
 
             <div class="my-section">
 
                 <div class="container text-center">
-                    <h2 class="animated animated fadeIn title">Projects</h2>
+                    <h2 class="animated animated fadeIn title">Works</h2>
                 </div>
 
                 <div class="project-container">
@@ -130,14 +133,21 @@
                             </a>
                         </div>
                         <div class="col-md-6 d-flex align-content-center flex-wrap title-section">
-                            <a href="https://www.notion.so/New-look-new-story-xotours-vn-9a8bb78953cf41ff85e0612fb389298d" class="project-title animated fadeInUpTitle delay-05s" target="_blank">My very first step from Motion Design to UI Design</a>
+                            <a href="https://www.notion.so/New-look-new-story-xotours-vn-9a8bb78953cf41ff85e0612fb389298d" class="project-title animated fadeInUpTitle delay-05s" target="_blank">My very first UI/UX case study: Let's redesign xotours.vn</a>
                             <a href="https://www.notion.so/New-look-new-story-xotours-vn-9a8bb78953cf41ff85e0612fb389298d" class="my-link arrow animated fadeInUp delay-05s" target="_blank">read more</a>
                         </div>
                     </div>
 
                 </div>
-            </div>
+                <div class="container text-center" style="margin-top: 5%;">
+                    <h2 class="animated animated fadeIn title">Shots</h2>
+                </div>
 
+                <div class="grid shot-container">
+                    <div class="grid-sizer"></div>
+                    <div id="shots"></div>
+                </div>
+            </div>
 
         </div>
         <div id="about" class="tab-pane fade"><br>
@@ -182,36 +192,33 @@
                     </p>
                 </div>
             </div>
-
-            <script src='https://labs.nearpod.com/bodymovin/demo/markus/halloween/lottie.min.js'></script>
-            <script src="javascripts/script.js"></script>
-            <script>
-                $('#to-project-button').click(function(e) {
-                    e.preventDefault();
-                    $('.nav a[href="#project"]').tab('show');
-                })
-            </script>
-            <script>
-                var homeContainer = document.getElementById('homeContainer');
-                var animItem = bodymovin.loadAnimation({
-                    wrapper: homeContainer,
-                    animType: 'svg',
-                    loop: true,
-                    path: 'images/home.json'
-                });
-                var mailContainer = document.getElementById('mailContainer');
-                var animItem = bodymovin.loadAnimation({
-                    wrapper: mailContainer,
-                    animType: 'svg',
-                    loop: true,
-                    path: 'images/mail.json'
-                });
-            </script>
-
         </div>
     </div>
     <%include footer.ejs%>
 
+        <script src='https://labs.nearpod.com/bodymovin/demo/markus/halloween/lottie.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+        <script src='https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js'></script>
+        <script src='https://npmcdn.com/imagesloaded@4/imagesloaded.pkgd.js'></script>
+        <!-- <script src="javascripts/test.js"></script> -->
+        <script src="javascripts/script.js"></script>
+        <script>
+            var homeContainer = document.getElementById('homeContainer');
+            var animItem = bodymovin.loadAnimation({
+                wrapper: homeContainer,
+                animType: 'svg',
+                loop: true,
+                path: 'images/home.json'
+            });
+            var mailContainer = document.getElementById('mailContainer');
+            var animItem = bodymovin.loadAnimation({
+                wrapper: mailContainer,
+                animType: 'svg',
+                loop: true,
+                path: 'images/mail.json'
+            });
+        </script>
 </body>
 
 </html>
