@@ -107,6 +107,10 @@ a {
     transform: scale(1.1);
 }
 
+.row {
+    margin: 0;
+}
+
 .project-section {
     padding: 0 0 8vh 0;
     margin: 0;
@@ -202,7 +206,6 @@ a {
 }
 
 .about-section {
-    width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -451,7 +454,7 @@ a:hover {
 @media (max-width: 767px) {
     p {
         font: 4.8vw "Montserrat";
-        line-height: 7.2vw;
+        line-height: 8vw;
     }
     .single-fold {
         height: 88%;
@@ -584,6 +587,12 @@ a:hover {
     #shots .shot .shot-title {
         font: 4.8vw "Montserrat";
         font-weight: 700;
+    }
+    .project-container {
+        padding: 0;
+    }
+    .shot-container {
+        padding: 0;
     }
 }
 
