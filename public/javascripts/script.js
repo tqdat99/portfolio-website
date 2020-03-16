@@ -1,3 +1,19 @@
+var homeContainer = document.getElementById('homeContainer');
+var animItem = bodymovin.loadAnimation({
+    wrapper: homeContainer,
+    animType: 'svg',
+    loop: true,
+    path: 'images/home.json'
+});
+var mailContainer = document.getElementById('mailContainer');
+var animItem = bodymovin.loadAnimation({
+    wrapper: mailContainer,
+    animType: 'svg',
+    loop: true,
+    path: 'images/mail.json'
+});
+
+
 // Set the Access Token
 var accessToken = 'cce761cf79c0ff6bd426c573f0f7e7da61b3873c46f9d878d770c05fa6398d8a';
 // Call Dribble v2 API
@@ -58,6 +74,8 @@ if (currentHref.includes('projects')) {
     document.getElementById("sidenav-home").removeAttribute("href");
 }
 
+
+
 var $grid = $('.grid').isotope({
     itemSelector: '.grid-item',
     percentPosition: true,
@@ -65,6 +83,7 @@ var $grid = $('.grid').isotope({
         columnWidth: '.grid-sizer'
     }
 });
+
 // layout Isotope after each image loads
 $grid.imagesLoaded().progress(function() {
     $grid.isotope('layout');
