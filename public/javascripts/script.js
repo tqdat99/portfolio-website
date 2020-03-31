@@ -49,7 +49,7 @@ $.ajax({
             $.each(videos.reverse(), function(i, val) {
                 console.log(val.pictures.sizes[5].link);
                 $('#videos').prepend(
-                    '<div class="grid-item" style="width:50%"><a class="shot" target="_blank" href="' + val.link + '" title="' + val.name + '"><div class="shot-title">' + val.name + '</div><img src="' + val.pictures.sizes[5].link + '"/></div></a>'
+                    '<div class="grid-item-video"><a class="shot" target="_blank" href="' + val.link + '" title="' + val.name + '"><div class="shot-title">' + val.name + '</div><img src="' + val.pictures.sizes[5].link + '"/></div></a>'
                 )
             })
         } else {

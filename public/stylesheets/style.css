@@ -396,15 +396,12 @@ a:hover {
 .grid-sizer,
 .grid-item {
     width: 33.333%;
-}
-
-.grid-item {
     float: left;
 }
 
-.grid-item img {
-    display: block;
-    max-width: 100%;
+.grid-item-video {
+    width: 50%;
+    float: left;
 }
 
 .shots {
@@ -583,7 +580,8 @@ a:hover {
         border-top: 0.04vw solid #dee2e6!important;
     }
     .grid-sizer,
-    .grid-item {
+    .grid-item,
+    .grid-item-video {
         width: 100%;
     }
     .shots .shot .shot-title {
