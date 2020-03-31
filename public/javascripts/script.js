@@ -15,10 +15,10 @@ var animItem = bodymovin.loadAnimation({
 
 
 // Set the Access Token
-var accessToken = 'cce761cf79c0ff6bd426c573f0f7e7da61b3873c46f9d878d770c05fa6398d8a';
+var dribbble_accessToken = 'cce761cf79c0ff6bd426c573f0f7e7da61b3873c46f9d878d770c05fa6398d8a';
 // Call Dribble v2 API
 $.ajax({
-    url: 'https://api.dribbble.com/v2/user/shots?access_token=' + accessToken,
+    url: 'https://api.dribbble.com/v2/user/shots?access_token=' + dribbble_accessToken,
     dataType: 'json',
     type: 'GET',
     success: function(data) {
@@ -26,6 +26,30 @@ $.ajax({
             $.each(data.reverse(), function(i, val) {
                 $('#shots').prepend(
                     '<div class="grid-item"><a class="shot" target="_blank" href="' + val.html_url + '" title="' + val.title + '"><div class="shot-title">' + val.title + '</div><img src="' + val.images.hidpi + '"/></div></a>'
+                )
+            })
+        } else {
+            $('#shots').append('<p>No shots yet!</p>');
+        }
+    }
+});
+
+var vimeo_accessToken = 'a168061f8ab7853ba08e736d369b7814';
+$.ajax({
+    beforeSend: function(xhr) {
+        xhr.setRequestHeader("Accept", "application/vnd.vimeo.*+json;version=3.4")
+        xhr.setRequestHeader("Content-Type", "application/json")
+        xhr.setRequestHeader("Authorization", "Bearer " + vimeo_accessToken)
+    },
+    url: 'https://api.vimeo.com/users/92838272/videos/?fields=link,name,pictures',
+    type: 'GET',
+    success: function(data) {
+        videos = data.data;
+        if (videos.length > 0) {
+            $.each(videos.reverse(), function(i, val) {
+                console.log(val.pictures.sizes[5].link);
+                $('#videos').prepend(
+                    '<div class="grid-item" style="width:50%"><a class="shot" target="_blank" href="' + val.link + '" title="' + val.name + '"><div class="shot-title">' + val.name + '</div><img src="' + val.pictures.sizes[5].link + '"/></div></a>'
                 )
             })
         } else {
