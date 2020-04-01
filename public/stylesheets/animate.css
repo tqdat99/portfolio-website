@@ -3317,6 +3317,16 @@
     animation-delay: 0.1s;
 }
 
+.animated.delay-02s {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.animated.delay-03s {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
 .animated.delay-025s {
     -webkit-animation-delay: 0.25s;
     animation-delay: 0.25s;
@@ -3387,4 +3397,41 @@
         -webkit-animation-iteration-count: 1 !important;
         animation-iteration-count: 1 !important;
     }
+}
+
+@-webkit-keyframes float {
+    0% {
+        -webkit-transform: translate3d(0, -2%, 0);
+        transform: translate3d(0, -2%, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(0, 2%, 0);
+        transform: translate3d(0, 2%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, -2%, 0);
+        transform: translate3d(0, -2%, 0);
+    }
+}
+
+@keyframes float {
+    0% {
+        -webkit-transform: translate3d(0, -2%, 0);
+        transform: translate3d(0, -2%, 0);
+    }
+    50% {
+        -webkit-transform: translate3d(0, 2%, 0);
+        transform: translate3d(0, 2%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, -2%, 0);
+        transform: translate3d(0, -2%, 0);
+    }
+}
+
+.floating {
+    -webkit-animation-name: float;
+    animation-name: float;
+    -webkit-animation-duration: 2400ms;
+    animation-duration: 2400ms;
 }

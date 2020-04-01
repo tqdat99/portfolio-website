@@ -13,7 +13,6 @@ var animItem = bodymovin.loadAnimation({
     path: 'images/mail.json'
 });
 
-
 // Set the Access Token
 var dribbble_accessToken = 'cce761cf79c0ff6bd426c573f0f7e7da61b3873c46f9d878d770c05fa6398d8a';
 // Call Dribble v2 API
@@ -47,7 +46,6 @@ $.ajax({
         videos = data.data;
         if (videos.length > 0) {
             $.each(videos.reverse(), function(i, val) {
-                console.log(val.pictures.sizes[5].link);
                 $('#videos').prepend(
                     '<div class="grid-item-video"><a class="shot" target="_blank" href="' + val.link + '" title="' + val.name + '"><div class="shot-title">' + val.name + '</div><img src="' + val.pictures.sizes[5].link + '"/></div></a>'
                 )
@@ -63,6 +61,26 @@ $('#to-project-button').click(function(e) {
     $('.nav a[href="#works"]').tab('show');
 });
 
+$('#mySidebarOptions li a').click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 0);
+});
+
+var btn = $('#back-to-top');
+
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+    } else {
+        btn.removeClass('show');
+    }
+});
+
+btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0 }, 0);
+});
+
 function openNav() {
     if (document.getElementById("mySidebar").style.width == "64vw") {
         document.getElementById("mySidebar").style.width = "0";
@@ -75,38 +93,13 @@ function openNav() {
     }
 };
 
-var currentHref = window.location.href
-if (currentHref.includes('projects')) {
-    document.getElementById("projects").classList.add("active");
-    document.getElementById("projects").removeAttribute("href");
-    document.getElementById("sidenav-projects").classList.add("active");
-    document.getElementById("sidenav-projects").removeAttribute("href");
-} else if (currentHref.includes('about')) {
-    document.getElementById("about").classList.add("active");
-    document.getElementById("about").removeAttribute("href");
-    document.getElementById("sidenav-about").classList.add("active");
-    document.getElementById("sidenav-about").removeAttribute("href");
-} else if (currentHref.includes('contact')) {
-    document.getElementById("contact").classList.add("active");
-    document.getElementById("contact").removeAttribute("href");
-    document.getElementById("sidenav-contact").classList.add("active");
-    document.getElementById("sidenav-contact").removeAttribute("href");
-} else {
-    document.getElementById("home").classList.add("active");
-    document.getElementById("home").removeAttribute("href");
-    document.getElementById("sidenav-home").classList.add("active");
-    document.getElementById("sidenav-home").removeAttribute("href");
-}
-
-
-
-var $grid = $('.grid').isotope({
-    itemSelector: '.grid-item',
-    percentPosition: true,
-    masonry: {
-        columnWidth: '.grid-sizer'
-    }
-});
+// var $grid = $('.grid').isotope({
+//     itemSelector: '.grid-item',
+//     percentPosition: true,
+//     masonry: {
+//         columnWidth: '.grid-sizer'
+//     }
+// });
 
 // layout Isotope after each image loads
 $grid.imagesLoaded().progress(function() {

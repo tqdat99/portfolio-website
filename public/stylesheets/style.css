@@ -3,6 +3,10 @@ body {
     background-color: #ffffff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .my-section {
     padding: 4vh 8vw 4vh 8vw;
     margin: 0;
@@ -51,8 +55,13 @@ body {
 }
 
 .my-about {
-    width: 32vw;
+    width: 24vw;
     height: auto;
+    animation: float ease-in-out infinite;
+    /* position: absolute;
+    right: 30%;
+    top: 0;
+    z-index: -1; */
 }
 
 a {
@@ -347,6 +356,7 @@ a:hover {
 
 .avatar-section {
     margin-bottom: 8vh;
+    position: relative;
 }
 
 .hamburger {
@@ -450,6 +460,101 @@ a:hover {
     transition: opacity .2s ease-in-out;
 }
 
+#back-to-top {
+    padding: 1.6%;
+    display: inline-block;
+    background-color: #27A08D;
+    width: 4vw;
+    height: 4vw;
+    text-align: center;
+    border-radius: 0;
+    position: fixed;
+    bottom: 2vw;
+    right: 2vw;
+    transition: background-color .24s, opacity .4s, visibility .4s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+#back-to-top::after {
+    content: url('/images/up.svg');
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#back-to-top:hover {
+    cursor: pointer;
+    background-color: rgb(29, 141, 124);
+}
+
+#back-to-top:active {
+    background-color: rgb(61, 202, 181);
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.circle-green-fill {
+    height: 16vw;
+    width: 16vw;
+    background-color: #27A08D;
+    border-radius: 50%;
+    position: absolute;
+    left: 48%;
+    z-index: -1;
+    animation: float ease-in-out infinite;
+}
+
+.circle-black-stroke {
+    height: 16vw;
+    width: 16vw;
+    border: 0.16vw solid #2C2828;
+    border-radius: 50%;
+    position: absolute;
+    right: 48%;
+    z-index: -1;
+    animation: float ease-in-out infinite;
+}
+
+
+/* Styles for the content section */
+
+.content {
+    width: 77%;
+    margin: 50px auto;
+    font-family: 'Merriweather', serif;
+    font-size: 17px;
+    color: #6c767a;
+    line-height: 1.9;
+}
+
+@media (min-width: 500px) {
+    .content {
+        width: 43%;
+    }
+    #button {
+        margin: 30px;
+    }
+}
+
+.content h1 {
+    margin-bottom: -10px;
+    color: #03a9f4;
+    line-height: 1.5;
+}
+
+.content h3 {
+    font-style: italic;
+    color: #96a2a7;
+}
+
 @media (max-width: 767px) {
     p {
         font: 4.8vw "Montserrat";
@@ -504,7 +609,7 @@ a:hover {
         height: auto;
     }
     .avatar-section {
-        margin-bottom: 6.4vh;
+        margin-bottom: 7.2vh;
     }
     .contact {
         font-size: 6.4vw;
@@ -561,8 +666,20 @@ a:hover {
         height: 40vh;
     }
     .my-about {
-        width: 80vw;
+        width: 72vw;
         height: auto;
+    }
+    .circle-black-stroke {
+        height: 56vw;
+        width: 56vw;
+        right: 32%;
+        top: -5%;
+    }
+    .circle-green-fill {
+        height: 56vw;
+        width: 56vw;
+        left: 32%;
+        bottom: -5%;
     }
     .my-logo {
         width: 16%;
@@ -593,6 +710,14 @@ a:hover {
     }
     .shot-container {
         padding: 0;
+    }
+    #back-to-top {
+        padding: 4.8%;
+        width: 12vw;
+        height: 12vw;
+        position: fixed;
+        bottom: 4vw;
+        right: 4vw;
     }
 }
 
