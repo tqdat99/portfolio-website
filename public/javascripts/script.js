@@ -101,7 +101,30 @@ function openNav() {
 //     }
 // });
 
+var currentHref = window.location.href
+if (currentHref.includes('works')) {
+    document.getElementById("works").classList.add("active");
+    //document.getElementById("works").removeAttribute("href");
+    document.getElementById("sidenav-works").classList.add("active");
+    //document.getElementById("sidenav-works").removeAttribute("href");
+} else if (currentHref.includes('about')) {
+    document.getElementById("about").classList.add("active");
+    //document.getElementById("about").removeAttribute("href");
+    document.getElementById("sidenav-about").classList.add("active");
+    //document.getElementById("sidenav-about").removeAttribute("href");
+} else if (currentHref.includes('contact')) {
+    document.getElementById("contact").classList.add("active");
+    //document.getElementById("contact").removeAttribute("href");
+    document.getElementById("sidenav-contact").classList.add("active");
+    //document.getElementById("sidenav-contact").removeAttribute("href");
+} else {
+    document.getElementById("home").classList.add("active");
+    //document.getElementById("home").removeAttribute("href");
+    document.getElementById("sidenav-home").classList.add("active");
+    //document.getElementById("sidenav-home").removeAttribute("href");
+}
+
 // layout Isotope after each image loads
-$grid.imagesLoaded().progress(function() {
-    $grid.isotope('layout');
-});
+// $grid.imagesLoaded().progress(function() {
+//     $grid.isotope('layout');
+// });

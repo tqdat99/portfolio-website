@@ -5,41 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="/images/icon.png">
+    <meta property="og:image" content="/images/hero.png" />
+    <meta property="og:description" content="Hi, I'm Dat. I’m studying software development at Facaulty of Information Technology, University of Science, Vietnam National University. I’m now looking for an internship as a product designer. Besides, I have a special love for motion design. I’m also available for short freelance motion projects. For example, some onboarding screens for mobile apps."
+    />
+    <meta property="og:title" content="Dat Truong" />
+    <link rel="icon" href="/images/favicon.png">
 
-    <title>Home</title>
 
+    <title>Dat Truong</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="stylesheets/style.css" rel="stylesheet">
-    <link href="stylesheets/animate.css" rel="stylesheet">
+    <link rel="preload" href="images/home.json" as="fetch">
+    <link rel="preload" href="images/mail.json" as="fetch">
     <link rel="preload" as="image" href="images/project-1.jpg">
     <link rel="preload" as="image" href="images/project-2.jpg">
     <link rel="preload" as="image" href="images/about.png">
     <link rel="preload" as="image" href="images/hero.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="stylesheets/animate.css" rel="stylesheet">
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158794000-1"></script>
+    <script>
+        (function(h, e, a, t, m, p) {
+            m = e.createElement(a);
+            m.async = !0;
+            m.src = t;
+            p = e.getElementsByTagName(a)[0];
+            p.parentNode.insertBefore(m, p);
+        })(window, document, 'script', 'https://u.heatmap.it/log.js');
+    </script>
+    <!-- Hotjar Tracking Code for www.tqdat.me -->
+    <script>
+        (function(h, o, t, j, a, r) {
+            h.hj = h.hj || function() {
+                (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+                hjid: 1753537,
+                hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+    <script type='text/javascript'>
+        window.smartlook || (function(d) {
+            var o = smartlook = function() {
+                    o.api.push(arguments)
+                },
+                h = d.getElementsByTagName('head')[0];
+            var c = d.createElement('script');
+            o.api = new Array();
+            c.async = true;
+            c.type = 'text/javascript';
+            c.charset = 'utf-8';
+            c.src = 'https://rec.smartlook.com/recorder.js';
+            h.appendChild(c);
+        })(document);
+        smartlook('init', 'f479e51482306ada879bbd51447c68dbac217c78');
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-158794000-1');
+    </script>
 </head>
 
 <body>
+    <%include header.ejs%>
+        <div id="myOverlay" class="overlay" onclick="openNav()">
+        </div>
 
-    <%include nav.ejs%>
-        <div class="my-section">
-            <div class="row d-flex align-content-center flex-wrap home-section">
-                <div class="col-md-5 d-flex align-items-center flex-column hero-section ">
-                    <img src="images/hero.png" class="my-hero animated fadeIn ">
-                </div>
-                <div class="col-md-7 d-flex align-content-center flex-wrap name-section">
-                    <h1 class="last-name animated fadeInUp d-flex">TRƯƠNG</h1>
-                    <h1 class="first-name last-name animated fadeInUp delay-025s">QUỐC ĐẠT</h1>
-                    <a href="/projects" class="my-link arrow animated fadeInUp delay-05s">my projects</a>
+        <!-- Tab panes -->
+
+        <div class="single-fold"><br>
+            <div class="my-section row home-section" style="height: 100%;">
+                <div class="row d-flex align-content-center flex-wrap home-section d-flex align-items-stretch">
+                    <div class="col-md-5 align-items-center flex-column hero-section">
+                        <div class="my-hero animated fadeIn" id="homeContainer"></div>
+                    </div>
+                    <div class="col-md-7 d-flex align-content-center flex-wrap name-section">
+                        <h1 class="last-name animated fadeInUp">TRUONG</h1>
+                        <h1 class="first-name last-name animated fadeInUp delay-025s">QUOC-DAT</h1>
+                        <a href="" class="my-home-link arrow animated fadeInUp delay-05s" id="to-project-button" name="to-project-button">my works</a>
+                    </div>
                 </div>
             </div>
         </div>
+
         <%include footer.ejs%>
 
+            <!-- <script src='https://labs.nearpod.com/bodymovin/demo/markus/halloween/lottie.min.js'></script> -->
+            <script src='https://labs.nearpod.com/bodymovin/demo/markus/halloween/lt.min.js'></script>
+            <script src='https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js'></script>
+            <script src='https://npmcdn.com/imagesloaded@4/imagesloaded.pkgd.js'></script>
             <script src="javascripts/script.js"></script>
-
 </body>
 
 </html>

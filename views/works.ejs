@@ -89,17 +89,62 @@
 <body>
     <%include header.ejs%>
 
-        <div class="single-fold">
-            <div class="my-section" style="height: 100%; padding-top: 0;">
-                <div class="contact-section animated fadeIn delay-01s justify-content-center align-content-center flex-wrap">
-                    <div id="mailContainer"></div>
-                    <p class="contact animated fadeIn delay-02s">You can say hi to me through <a href="mailto:tqdat99@gmail.com?Subject=Hi" target="_top" class="green-link">tqdat99@gmail.com</a> or <a href="https://www.facebook.com/tqdat99" class="green-link" target="_blank">Facebook</a>.
-                        </br>Otherwise, check out my <a href="https://www.linkedin.com/in/tqdat99/" class="green-link" target="_blank">Linkedin</a>,
-                        <a href="https://dribbble.com/tqdat99" class="green-link" target="_blank">Dribbble</a>, <a href="https://vimeo.com/tqdat99" class="green-link" target="_blank">Vimeo</a>.
-                    </p>
+        <!-- Tab panes -->
+        <a id="back-to-top"></a>
+        <div class="my-section">
+
+            <div class="container text-center">
+                <h2 class="animated animated fadeIn title">Highlights</h2>
+            </div>
+
+            <div class="project-container">
+                <div class="row project-section">
+                    <div class="col-md-6 project-thumbnail-section">
+                        <a href="https://medium.com/@tqdat99/how-we-won-the-facebook-developer-circles-innovation-challenge-ab83226c45e4" target="_blank">
+                            <div class="square project-1 animated fadeInUpShort delay-025s">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 d-flex align-content-center flex-wrap title-section">
+                        <a href="https://medium.com/@tqdat99/how-we-won-the-facebook-developer-circles-innovation-challenge-ab83226c45e4" class="project-title animated fadeInUpTitle delay-05s" target="_blank">How we won the Facebook Developer Circles Innovation Challenge</a>
+                        <a href="https://medium.com/@tqdat99/how-we-won-the-facebook-developer-circles-innovation-challenge-ab83226c45e4" class="my-link arrow animated fadeInUp delay-05s" target="_blank">read more</a>
+                    </div>
                 </div>
+
+                <div class="row project-section">
+                    <div class="col-md-6 project-thumbnail-section">
+                        <a href="https://www.notion.so/New-look-new-story-xotours-vn-9a8bb78953cf41ff85e0612fb389298d" target="_blank">
+                            <div class="square project-2 animated fadeInUpShort delay-025s">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 d-flex align-content-center flex-wrap title-section">
+                        <a href="https://www.notion.so/New-look-new-story-xotours-vn-9a8bb78953cf41ff85e0612fb389298d" class="project-title animated fadeInUpTitle delay-05s" target="_blank">My very first UI/UX case study: Let's redesign xotours.vn</a>
+                        <a href="https://www.notion.so/New-look-new-story-xotours-vn-9a8bb78953cf41ff85e0612fb389298d" class="my-link arrow animated fadeInUp delay-05s" target="_blank">read more</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container text-center" style="margin-top: 5%;">
+                <h2 class="animated animated fadeIn title">Shots</h2>
+            </div>
+
+            <div class="grid shot-container">
+                <div class="grid-sizer"></div>
+                <div id="shots" class="shots"></div>
+            </div>
+
+            <div class="container text-center" style="margin-top: 5%;">
+                <h2 class="animated animated fadeIn title">Videos</h2>
+            </div>
+
+            <div class="grid shot-container">
+                <div class="grid-sizer"></div>
+                <div id="videos" class="shots"></div>
             </div>
         </div>
+
+
         <%include footer.ejs%>
 
             <!-- <script src='https://labs.nearpod.com/bodymovin/demo/markus/halloween/lottie.min.js'></script> -->

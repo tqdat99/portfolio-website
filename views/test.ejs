@@ -1,19 +1,107 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>CodePen - Dribbble Shots via v2 API</title>
-    <link rel="stylesheet" href="stylesheets/test.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/images/icon.png">
 
+    <title>Projects</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="stylesheets/animate.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="preload" as="image" href="images/project-1.jpg">
+    <link rel="preload" as="image" href="images/project-2.jpg">
+    <link rel="preload" as="image" href="images/about.png">
+    <link rel="preload" as="image" href="images/hero.png">
+    <style>
+        #loader {
+            border: 12px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 12px solid #444444;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+            N
+        }
+        
+        .center {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+    <script>
+        function hideLoader() {
+            document.querySelector(
+                "#loader").style.display = "none";
+            console.log("done");
+        }
+    </script>
 </head>
 
-<body>
-    <!-- partial:index.partial.html -->
-    <div id="shots"></div>
-    <!-- partial -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <script src="javascripts/test.js"></script>
+<body onload="hideLoader()">
+    <div id="loader" class="center"></div>
+    <%include nav.ejs%>
+        <div class="my-section">
+
+            <div class="container text-center">
+                <h2 class="animated animated fadeIn title">Projects</h2>
+            </div>
+
+            <div class="project-container">
+                <div class="row project-section">
+                    <div class="col-md-6 project-thumbnail-section">
+                        <a href="https://medium.com/@tqdat99/how-we-won-the-facebook-developer-circles-innovation-challenge-ab83226c45e4" target="_blank">
+                            <div class="square project-1 animated fadeInUpShort delay-025s">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 d-flex align-content-center flex-wrap title-section">
+                        <a href="https://medium.com/@tqdat99/how-we-won-the-facebook-developer-circles-innovation-challenge-ab83226c45e4" class="project-title animated fadeInUpTitle delay-05s" target="_blank">How we won the Facebook Developer Circles Innovation Challenge</a>
+                        <a href="https://medium.com/@tqdat99/how-we-won-the-facebook-developer-circles-innovation-challenge-ab83226c45e4" class="my-link arrow animated fadeInUp delay-05s" target="_blank">read more</a>
+                    </div>
+                </div>
+
+                <div class="row project-section">
+                    <div class="col-md-6 project-thumbnail-section">
+                        <a href="/projects/my-very-first-step-from-motion-design-to-ui-design" target="_blank">
+                            <div class="square project-2 animated fadeInUpShort delay-025s">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 d-flex align-content-center flex-wrap title-section">
+                        <a href="https://www.notion.so/New-look-new-story-xotours-vn-9a8bb78953cf41ff85e0612fb389298d" class="project-title animated fadeInUpTitle delay-05s" target="_blank">My very first step from Motion Design to UI Design</a>
+                        <a href="https://www.notion.so/New-look-new-story-xotours-vn-9a8bb78953cf41ff85e0612fb389298d" class="my-link arrow animated fadeInUp delay-05s" target="_blank">read more</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <%include footer.ejs%>
+            </div>
+
+            <script src="javascripts/script.js"></script>
+            <script>
+                $("#dynamicSection").load("about.ejs");
+                $("#dynamicSection").load("contact.ejs");
+                $("#dynamicSection").load("projects.ejs");
+            </script>
 
 </body>
 
