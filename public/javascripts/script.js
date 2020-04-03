@@ -61,10 +61,10 @@ $('#to-project-button').click(function(e) {
     $('.nav a[href="#works"]').tab('show');
 });
 
-$('#mySidebarOptions li a').click(function(e) {
-    e.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, 0);
-});
+// $('#mySidebarOptions li a').click(function(e) {
+//     e.preventDefault();
+//     $('html, body').animate({ scrollTop: 0 }, 0);
+// });
 
 var btn = $('#back-to-top');
 
