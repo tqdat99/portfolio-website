@@ -13,7 +13,8 @@ html {
 }
 
 .my-logo {
-    width: 8%;
+    height: 100%;
+    width: auto;
 }
 
 .navbar-p {
@@ -376,6 +377,7 @@ a:hover {
 
 .brand {
     height: 100%;
+    width: auto;
 }
 
 .my-nav {
@@ -682,7 +684,8 @@ a:hover {
         bottom: -5%;
     }
     .my-logo {
-        width: 16%;
+        height: 100%;
+        width: auto;
     }
     .footer-text {
         font: 2.4vw "Montserrat";
