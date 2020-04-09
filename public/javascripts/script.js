@@ -56,10 +56,10 @@ $.ajax({
     }
 });
 
-$('#to-project-button').click(function(e) {
-    e.preventDefault();
-    $('.nav a[href="#works"]').tab('show');
-});
+// $('#to-project-button').click(function(e) {
+//     e.preventDefault();
+//     $('.nav a[href="#works"]').tab('show');
+// });
 
 // $('#mySidebarOptions li a').click(function(e) {
 //     e.preventDefault();
