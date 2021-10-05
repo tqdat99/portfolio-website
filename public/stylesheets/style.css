@@ -10,6 +10,8 @@ html {
 .my-section {
     padding: 4vh 8vw 4vh 8vw;
     margin: 0;
+    align-items: center;
+    align-content: center;
 }
 
 .my-logo {
@@ -18,7 +20,7 @@ html {
 }
 
 .navbar-p {
-    font: 1vw "Montserrat";
+    font: 1vw "Poppins";
     margin-right: 2.4vw;
 }
 
@@ -38,14 +40,14 @@ html {
 }
 
 .last-name {
-    font: 4vw "Montserrat";
+    font: 4vw "Poppins";
     font-weight: 400;
     color: #2C2828;
     width: 100%;
 }
 
 .first-name {
-    font: 6vw "Montserrat";
+    font: 6vw "Poppins";
     font-weight: 700;
     color: #2C2828;
     width: 100%;
@@ -71,7 +73,7 @@ a {
 
 .my-link {
     width: 100%;
-    font: 1.2vw "Montserrat";
+    font: 1.2vw "Poppins";
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.32vw;
@@ -82,13 +84,15 @@ a {
 
 .my-home-link {
     width: 100%;
-    font: 1.2vw "Montserrat";
-    font-weight: 400;
+    font: 1.2vw "Poppins";
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.32vw;
+    letter-spacing: 0.24vw;
     margin-top: 4%;
+    margin-right: 40px;
     -webkit-transition: letter-spacing 0.3s;
     transition: letter-spacing 0.3s;
+    color: #27A08D;
 }
 
 .my-home-link:hover {
@@ -153,8 +157,8 @@ a {
 }
 
 .title {
-    font: 2.4vw "Montserrat";
-    font-weight: 700;
+    font: 2.4vw "Poppins";
+    font-weight: 650;
     color: #2C2828;
     display: inline-block;
     text-decoration: none;
@@ -163,7 +167,7 @@ a {
     background-repeat: no-repeat;
     background-size: 50% 0.88vh;
     margin-top: 4vh;
-    margin-bottom: 8.8vh;
+    margin-bottom: 8vh;
     padding-bottom: 2vh;
 }
 
@@ -176,6 +180,10 @@ a {
     text-align: right;
 }
 
+.project-0 {
+    background-image: url('/images/Thumbnail 1.png');
+}
+
 .project-1 {
     background-image: url('/images/project-1.jpg');
 }
@@ -185,7 +193,7 @@ a {
 }
 
 .project-section .project-title {
-    font: 2.4vw "Montserrat";
+    font: 2.4vw "Poppins";
     font-weight: 600;
     color: #2C2828;
     letter-spacing: 0.08rem;
@@ -199,7 +207,7 @@ a {
 }
 
 .greeting {
-    font: 4.8vw "Montserrat";
+    font: 3vw "Poppins";
     font-weight: 600;
     color: #2C2828;
     letter-spacing: 0.08rem;
@@ -207,12 +215,14 @@ a {
 }
 
 .contact {
-    font: 2.2vw "Montserrat";
+    font: 2.2vw "Poppins";
     font-weight: 600;
     color: #2C2828;
     letter-spacing: 0.08vw;
     float: right;
     line-height: 4vw;
+    height: auto;
+    margin-top: 4vh;
 }
 
 .about-section {
@@ -226,7 +236,7 @@ a {
 }
 
 p {
-    font: 1.2vw "Montserrat";
+    font: 18px "Poppins";
     font-weight: 400;
     color: #2C2828;
     line-height: 2.4vw;
@@ -266,7 +276,7 @@ span.green {
 }
 
 .arrow {
-    color: #0c5449;
+    color: #27A08D;
 }
 
 .arrow::after {
@@ -298,7 +308,7 @@ a:hover {
 }
 
 .footer-text {
-    font: 0.8vw "Montserrat";
+    font: 0.8vw "Poppins";
     font-weight: 400;
     letter-spacing: 0.32vw;
     display: block;
@@ -334,12 +344,13 @@ a:hover {
 }
 
 .home-section {
-    padding-left: 8%;
-    padding-right: 4%;
+    padding-right: 12vw;
+    padding-left: 8vw; 
+    height: 100%;
 }
 
 .name-section {
-    padding-left: 3.2vw;
+    padding-left: 4vw;
     padding-right: 0px;
 }
 
@@ -356,7 +367,6 @@ a:hover {
 }
 
 .avatar-section {
-    margin-bottom: 8vh;
     position: relative;
 }
 
@@ -387,10 +397,11 @@ a:hover {
 }
 
 #mailContainer {
-    width: 12vw;
-    height: 12vw;
-    margin-bottom: 2vw;
+    width: 100%;
+    height: 10vw;
     display: flex;
+    margin:auto;
+    align-items: center;
 }
 
 .hero-section {
@@ -440,7 +451,7 @@ a:hover {
 }
 
 .shots .shot .shot-title {
-    font: 1.2vw "Montserrat";
+    font: 1.2vw "Poppins";
     font-weight: 700;
     position: absolute;
     width: calc(100% - 2rem);
@@ -559,19 +570,22 @@ a:hover {
 
 @media (max-width: 767px) {
     p {
-        font: 4.8vw "Montserrat";
+        font: 4.8vw "Poppins";
         line-height: 8vw;
     }
     .single-fold {
-        height: 88%;
+        height: auto;
     }
     .home-section {
-        padding-left: 6vw;
-        padding-right: 6vw;
+        height: auto;
+        padding: 20% 6vw 10% 6vw ;
+        align-items: center;
+        align-content: center;
     }
     .name-section {
         padding-left: 0px;
         padding-right: 0px;
+        text-align: center;
     }
     .last-name {
         text-align: center;
@@ -603,24 +617,23 @@ a:hover {
         margin-bottom: 8vh;
     }
     .greeting {
-        font-size: 8.8vw;
-        text-align: left;
-        margin-bottom: 7.2vh;
+        font-size: 32px;
+        text-align: center;
     }
     .hero-section {
         height: auto;
     }
     .avatar-section {
-        margin-bottom: 7.2vh;
+        margin-bottom: 8vh;
+        margin-top: 8vw;
     }
     .contact {
+        height:auto;
         font-size: 6.4vw;
         line-height: 12vw;
     }
     .contact-section {
-        padding-top: 16vw;
-        padding-right: 2vw;
-        padding-left: 2vw;
+        padding: 4vw;
     }
     .hamburger {
         height: auto;
@@ -640,8 +653,9 @@ a:hover {
         box-shadow: 0px 8px 24px 0px rgba(57, 64, 57, 0.16);
     }
     .my-section {
-        padding-top: calc(12vh + 4vw);
-    }
+    padding: 12vh 8vw 0 8vw ;
+    margin: 0;
+   }
     .overlay {
         position: fixed;
         visibility: hidden;
@@ -656,12 +670,18 @@ a:hover {
         z-index: 1;
         transition: 0.5s;
     }
+    .button{
+        margin:auto;
+    }
+    .raise{
+        font-size: 16px;
+    }
     #mailContainer {
         width: 24vw;
         height: 24vw;
-        margin-bottom: 4vw;
+        margin: auto;
         display: flex;
-        align-items: flex-start;
+        align-items: center;
     }
     .my-hero {
         width: auto;
@@ -688,7 +708,7 @@ a:hover {
         width: auto;
     }
     .footer-text {
-        font: 2.4vw "Montserrat";
+        font: 2.4vw "Poppins";
         font-weight: 400;
         letter-spacing: 0.8vw;
         margin-top: 0.8vw;
@@ -705,7 +725,7 @@ a:hover {
         width: 100%;
     }
     .shots .shot .shot-title {
-        font: 4.8vw "Montserrat";
+        font: 4.8vw "Poppins";
         font-weight: 700;
     }
     .project-container {
@@ -740,7 +760,7 @@ a:hover {
 .sidebar .sidebar-option {
     padding: 0 4vw 0 4vw;
     margin-bottom: 4vw;
-    font: 8vw "Montserrat";
+    font: 8vw "Poppins";
     font-weight: 600;
     color: rgb(212, 205, 205);
     display: block;
@@ -812,4 +832,59 @@ a:hover {
     top: 100px;
     left: 240px;
     z-index: 100;
+}
+
+/*
+  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+  box-shadow: [inset?] [top] [left] [blur] [size] [color];
+
+  Tips:
+    - We're setting all the blurs to 0 since we want a solid fill.
+    - Add the inset keyword so the box-shadow is on the inside of the element
+    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+    - Multiple shadows can be stacked
+    - If you're animating multiple shadows, be sure to keep the same number of shadows so the animation is smooth. Otherwise, you'll get something choppy.
+*/
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.8em 0.8em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.raise {
+  --color: rgb(29, 141, 124);
+  --hover: rgb(29, 141, 124);
+}
+
+button {
+  color: var(--color);
+  transition: 0.25s;
+}
+
+button:hover, button:focus {
+  border-color: var(--hover);
+  color: rgb(29, 141, 124);
+}
+
+button {
+  background: none;
+  border: 3px solid;
+  font: 1vw "Poppins";
+  font-weight: 600;
+  letter-spacing: 2;
+  text-transform: uppercase;
+  margin-top: 8px;
+  padding: 1em 2em;
 }

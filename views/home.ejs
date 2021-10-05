@@ -6,8 +6,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta property="og:image" content="/images/hero.png" />
-    <meta property="og:description" content="Hi, I'm Dat. I’m studying software development at Facaulty of Information Technology, University of Science, Vietnam National University. I’m now looking for an internship as a product designer. Besides, I have a special love for motion design. I’m also available for short freelance motion projects. For example, some onboarding screens for mobile apps."
-    />
+    <meta property="og:description"
+        content="Hi, I'm Dat. I’m studying software development at Facaulty of Information Technology, University of Science, Vietnam National University. I’m now looking for an internship as a product designer. Besides, I have a special love for motion design. I’m also available for short freelance motion projects. For example, some onboarding screens for mobile apps." />
     <meta property="og:title" content="Dat Truong" />
     <link rel="icon" href="/images/favicon.png">
 
@@ -21,8 +21,11 @@
     <link rel="preload" as="image" href="images/about-circle.png">
     <link rel="preload" as="image" href="images/hero.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
@@ -33,7 +36,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158794000-1"></script>
     <script>
-        (function(h, e, a, t, m, p) {
+        (function (h, e, a, t, m, p) {
             m = e.createElement(a);
             m.async = !0;
             m.src = t;
@@ -43,8 +46,8 @@
     </script>
     <!-- Hotjar Tracking Code for www.tqdat.me -->
     <script>
-        (function(h, o, t, j, a, r) {
-            h.hj = h.hj || function() {
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () {
                 (h.hj.q = h.hj.q || []).push(arguments)
             };
             h._hjSettings = {
@@ -59,10 +62,10 @@
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
     <script type='text/javascript'>
-        window.smartlook || (function(d) {
-            var o = smartlook = function() {
-                    o.api.push(arguments)
-                },
+        window.smartlook || (function (d) {
+            var o = smartlook = function () {
+                o.api.push(arguments)
+            },
                 h = d.getElementsByTagName('head')[0];
             var c = d.createElement('script');
             o.api = new Array();
@@ -88,26 +91,64 @@
 
 <body>
     <%include header.ejs%>
-        <div id="myOverlay" class="overlay" onclick="openNav()">
-        </div>
 
-        <!-- Tab panes -->
 
-        <div class="single-fold"><br>
-            <div class="my-section row home-section" style="height: 100%;">
-                <div class="row d-flex align-content-center flex-wrap home-section d-flex align-items-stretch">
-                    <div class="col-md-5 align-items-center flex-column hero-section">
-                        <div class="my-hero animated fadeIn" id="homeContainer"></div>
+        <div class="single-fold">
+            <div class="home-section row" >
+                <div class="row d-flex align-content-center flex-wrap d-flex align-items-stretch">
+                    <div class="col-md-5">
+                        <div
+                            class="container d-flex align-items-center justify-content-center avatar-section animated fadeIn delay-025s">
+                            <div class="circle-black-stroke animated floating delay-01s"></div>
+                            <img src="images/about-circle.png" class="my-about animated floating delay-02s">
+                            <div class="circle-green-fill animated floating delay-03s"></div>
+                        </div>
                     </div>
-                    <div class="col-md-7 d-flex align-content-center flex-wrap name-section">
-                        <h1 class="last-name animated fadeInUp">TRUONG</h1>
-                        <h1 class="first-name last-name animated fadeInUp delay-025s">QUOC-DAT</h1>
-                        <a href="/works" class="my-home-link arrow animated fadeInUp delay-05s" id="to-project-button" name="to-project-button">my works</a>
+                    <div class="col-md-7 d-flex align-content-center flex-wrap name-section animated fadeIn delay-05s">
+                        <p class="greeting ">A Product Maker combined of Tech, Design and
+                            Motion</p>
+                        <p class="animated fadeIn delay-05s">Hi, I’m
+                            <span class="green">Quoc-Dat Truong</span>.
+                            Currently, I’m a former <span class="green">Web Engineer, Product Designer</span> turned
+                            <span class="green">Product
+                                Owner</span>. You can download my <a href="Curriculum Vitae - Trương Quốc Đạt.pdf"
+                                class="green-link" download>CV</a>.
+                            Also, check out more shots on <a href="https://dribbble.com/tqdat99" class="green-link"
+                                target="_blank">Dribbble</a>
+                            or <a href="https://vimeo.com/tqdat99" class="green-link" target="_blank">Vimeo</a>.
+                            <br /> Wish you a nice day!
+
+                        </p>
+                        <a href="/works" class="button">
+                                <button href="/works" class="raise">Check out my works</button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- <div class="my-section animated fadeIn delay-075s">
 
+            <div id="mailContainer"></div>
+
+            <div class="container text-center" style="padding-bottom:0px">
+                <div class="container text-center">
+                    <h2 style="margin-bottom: 2vw" class="animated animated fadeIn title">Let's connect</h2>
+                    <div id="mail-container"></div>
+                </div>
+            </div>
+            <div
+                class="contact-section animated fadeIn delay-01s justify-content-center align-content-center flex-wrap">
+                <p class="animated fadeIn delay-02s">Say hi to me through <a href="mailto:tqdat99@gmail.com?Subject=Hi"
+                        target="_top" class="green-link">tqdat99@gmail.com</a> or
+                    <a href="https://www.facebook.com/tqdat99" class="green-link" target="_blank">Facebook</a>.
+                    </br>Otherwise, check out my <a href="https://www.linkedin.com/in/tqdat99/" class="green-link"
+                        target="_blank">Linkedin</a>,
+                    <a href="https://dribbble.com/tqdat99" class="green-link" target="_blank">Dribbble</a>, <a
+                        href="https://vimeo.com/tqdat99" class="green-link" target="_blank">Vimeo</a>.
+                </p>
+
+            </div> -->
+        </div>
         <%include footer.ejs%>
 
             <!-- <script src='https://labs.nearpod.com/bodymovin/demo/markus/halloween/lottie.min.js'></script> -->
