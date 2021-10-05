@@ -58,7 +58,7 @@ html {
 }
 
 .my-about {
-    width: 24vw;
+    width: 26vw;
     height: auto;
     animation: float ease-in-out infinite;
     /* position: absolute;
@@ -207,7 +207,7 @@ a {
 }
 
 .greeting {
-    font: 3vw "Poppins";
+    font: 50px "Poppins";
     font-weight: 600;
     color: #2C2828;
     letter-spacing: 0.08rem;
@@ -368,6 +368,7 @@ a:hover {
 
 .avatar-section {
     position: relative;
+    height:100%;
 }
 
 .hamburger {
@@ -515,23 +516,26 @@ a:hover {
 }
 
 .circle-green-fill {
-    height: 16vw;
-    width: 16vw;
+    height: 22vw;
+    width: 22vw;
     background-color: #27A08D;
     border-radius: 50%;
     position: absolute;
-    left: 48%;
+    left: 30%;
+    top: 12%;
     z-index: -1;
     animation: float ease-in-out infinite;
 }
 
+
 .circle-black-stroke {
-    height: 16vw;
-    width: 16vw;
+    height: 20vw;
+    width: 20vw;
     border: 0.16vw solid #2C2828;
     border-radius: 50%;
     position: absolute;
-    right: 48%;
+    right: 32%;
+    top: 38%;
     z-index: -1;
     animation: float ease-in-out infinite;
 }
