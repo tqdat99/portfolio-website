@@ -673,7 +673,7 @@ a:hover {
 button {
   color: var(--color);
   transition: 0.25s;
-  margin-right: 24px;
+  margin-right: 16px;
 }
 
 button:hover, button:focus {
