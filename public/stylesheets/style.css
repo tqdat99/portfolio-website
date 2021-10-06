@@ -683,7 +683,7 @@ button:hover, button:focus {
 button {
   background: rgb(29, 141, 124);
   color: #ffffff;
-  border: 3px solid;
+  border: 3px solid rgb(29, 141, 124);
   font: 1vw "Poppins";
   font-weight: 600;
   letter-spacing: 2;
@@ -694,7 +694,6 @@ button {
 
 .secondary {
   background: none;
-  border: 3px solid;
   color: rgb(29, 141, 124);
   font: 1vw "Poppins";
   font-weight: 600;
