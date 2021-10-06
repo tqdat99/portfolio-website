@@ -673,16 +673,29 @@ a:hover {
 button {
   color: var(--color);
   transition: 0.25s;
+  margin-right: 24px;
 }
 
 button:hover, button:focus {
   border-color: var(--hover);
-  color: rgb(29, 141, 124);
 }
 
 button {
+  background: rgb(29, 141, 124);
+  color: #ffffff;
+  border: 3px solid;
+  font: 1vw "Poppins";
+  font-weight: 600;
+  letter-spacing: 2;
+  text-transform: uppercase;
+  margin-top: 8px;
+  padding: 1em 2em;
+}
+
+.secondary {
   background: none;
   border: 3px solid;
+  color: rgb(29, 141, 124);
   font: 1vw "Poppins";
   font-weight: 600;
   letter-spacing: 2;
